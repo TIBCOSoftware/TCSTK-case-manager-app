@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {LogLevel, LogService} from '@tibco-tcstk/tc-core-lib';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tcstk-case-manager-app';
+
+  constructor(private logger: LogService) {
+    logger.level = LogLevel.Debug;
+    logger.info('My Cloud Starter Online...');
+  }
 }

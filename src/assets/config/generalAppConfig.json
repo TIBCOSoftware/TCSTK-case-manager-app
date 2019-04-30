@@ -1,0 +1,30 @@
+{
+  "browserTitle": "Tibco Cloud App",
+  "applicationTitle": "Case Manager App (TIBCO LABS™)",
+  "welcomeMessage": "Welcome to the Case Manager App",
+  "roles": [
+    {
+      "id": "Partner Portal Internal",
+      "group": "PartnerPortal Internal",
+      "display": "Employee",
+      "welcome": "welcome",
+      "imageURL": ""
+    },
+    {
+      "id": "Partner Portal External",
+      "group": "PartnerPortal External",
+      "display": "Partner",
+      "welcome": "welcome",
+      "imageURL": ""
+    },
+    {
+      "id": "Partner Portal Configurator",
+      "group": "PartnerPortal Configurator",
+      "display": "Admin",
+      "welcome": "welcome",
+      "imageURL": ""
+    }
+  ],
+  "displayName": true,
+  "documentationUrl": "assets/help.html"
+}
