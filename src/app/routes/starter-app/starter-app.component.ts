@@ -19,7 +19,6 @@ export class StarterAppComponent implements OnInit {
   ngOnInit() {
     this.config = this.route.snapshot.data.config;
     this.titleService.setTitle(this.config.browserTitle ? this.config.browserTitle : 'Tibco Cloud Starters');
-    // this.router.navigate(['/starterApp/home'], {});
   }
 
 }

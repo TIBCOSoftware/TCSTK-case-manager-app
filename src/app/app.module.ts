@@ -2,10 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {CaseGuard, TcLiveappsLibModule} from '@tibco-tcstk/tc-liveapps-lib';
-import {Location} from '@angular/common';
-import { RouterModule } from '@angular/router';
-import {FlexLayoutModule, FlexModule} from '@angular/flex-layout';
+import {TcLiveappsLibModule} from '@tibco-tcstk/tc-liveapps-lib';
+import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   MatButtonModule, MatButtonToggleModule,

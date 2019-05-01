@@ -6,7 +6,6 @@ import {
   LiveAppsSettingsComponent, LiveAppsSettingsRecentCasesComponent,
   LiveAppsSettingsRolesComponent, LiveAppsSettingsSummaryCardsComponent
 } from '@tibco-tcstk/tc-liveapps-lib';
-import {HOME_ROUTE} from '../starter-app-route';
 
 export const CONFIGURATION_ROUTE_CONFIG = [
   {

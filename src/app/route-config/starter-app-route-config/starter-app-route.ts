@@ -9,7 +9,7 @@ import {
   ClaimsResolver,
   GroupsResolver,
   LaConfigResolver,
-  LiveAppsConfigResolver, LiveAppsReportingCockpitComponent,
+  LiveAppsConfigResolver,
   RolesResolver
 } from '@tibco-tcstk/tc-liveapps-lib';
 import {SplashComponent} from '../../components/splash/splash.component';
@@ -60,6 +60,12 @@ export const STARTER_APP_ROUTES =
       laConfigHolder: LaConfigResolver,
       claims: ClaimsResolver,
     }
+  },
+  {
+    path: '', redirectTo: '/starterApp/home', pathMatch: 'full'
+  },
+  {
+    path: '**', redirectTo: '/starterApp/home'
   }
 ];
 
