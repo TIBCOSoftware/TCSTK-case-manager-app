@@ -4,11 +4,8 @@ import {GeneralConfig, UiAppConfig, RouteAction, Claim} from '@tibco-tcstk/tc-co
 import {CaseRoute, CaseType, LiveAppsConfig, Groups, Roles} from '@tibco-tcstk/tc-liveapps-lib';
 
 @Component({
-  selector: 'laapp-home',
-  templateUrl: './templates/home.component.casemanager.html',
-  // templateUrl: './templates/home.component.liveapps.html',
-  // templateUrl: './templates/home.component.processdiscovery.html',
-  // templateUrl: './templates/home.component.spotfireplay.html',
+  selector: 'app-home',
+  templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
@@ -27,6 +24,9 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
+  // Components used by this route can output a route action using an event emitter
+  // This handler will fire on these events and navigate to the appropriate route
+
   handleRouteAction = (routeAction: RouteAction) => {
     if (routeAction.action === 'caseClicked') {
       const caseRoute = new CaseRoute().deserialize(routeAction.context);
@@ -34,13 +34,29 @@ export class HomeComponent implements OnInit {
       this.router.navigate(['/starterApp/case/' + caseRoute.appId + '/' + caseRoute.typeId + '/' + caseRoute.caseRef]);
     }
     if (routeAction.action === 'configClicked') {
-      // route to config page
+      // config clicked route to config page
       this.router.navigate(['/starterApp/configuration/']);
     }
 
   }
 
   ngOnInit() {
+    // each route uses a resolver to get required data for any components it uses
+    // For example here the general config and liveAppsConfig is read from this.route.snapshot.data.laConfigHolder
+    // it was populated by LaConfigResolver (wraps generalConfig resolver and liveAppsConfig resolver)
+    // *****
+    // starter-app-route-config.ts:
+    // {
+    //     path: 'home',
+    //     component: HomeComponent,
+    //     canActivate: [AuthGuard],
+    //     resolve: {
+    //       claims: ClaimsResolver,
+    //  -->  laConfigHolder: LaConfigResolver, <--    *laConfigHolder* is this.route.snapshot.data.laConfigHolder below
+    //       groups: GroupsResolver,
+    //       roles: RolesResolver
+    //     }
+    //   }
     this.generalConfig = this.route.snapshot.data.laConfigHolder.generalConfig;
     this.liveAppsConfig = this.route.snapshot.data.laConfigHolder.liveAppsConfig;
     this.claims = this.route.snapshot.data.claims;

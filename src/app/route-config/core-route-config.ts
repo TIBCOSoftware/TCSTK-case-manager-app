@@ -9,7 +9,7 @@ import {StarterAppComponent} from '../routes/starter-app/starter-app.component';
 import {
   ClaimsResolver,
 } from '@tibco-tcstk/tc-liveapps-lib';
-import {STARTER_APP_ROUTES, STARTER_APP_PROVIDERS, HOME_ROUTE } from './starter-app-route-config/starter-app-route';
+import {STARTER_APP_ROUTES, STARTER_APP_PROVIDERS, HOME_ROUTE } from './starter-app-route-config/starter-app-route-config';
 
 export const CORE_ROUTES = [
       {

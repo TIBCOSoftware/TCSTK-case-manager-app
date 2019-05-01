@@ -22,7 +22,6 @@ import {StarterAppComponent} from './routes/starter-app/starter-app.component';
 import {CaseComponent} from './routes/case/case.component';
 import { ConfigurationComponent } from './routes/configuration/configuration.component';
 import { SplashComponent } from './components/splash/splash.component';
-import { ReportingComponent } from './routes/reporting/reporting.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -33,8 +32,7 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     CaseComponent,
     ConfigurationComponent,
-    SplashComponent,
-    ReportingComponent
+    SplashComponent
   ],
   imports: [
     AppRoutingModule,
