@@ -16,12 +16,12 @@ import {
 } from '@angular/material';
 import {LogService, TcCoreLibModule} from '@tibco-tcstk/tc-core-lib';
 import {TcFormsLibModule} from '@tibco-tcstk/tc-forms-lib';
-import {LoginComponent} from './components/login/login.component';
+import {LoginComponent} from './routes/login/login.component';
 import {HomeComponent} from './routes/home/home.component';
 import {StarterAppComponent} from './routes/starter-app/starter-app.component';
 import {CaseComponent} from './routes/case/case.component';
 import { ConfigurationComponent } from './routes/configuration/configuration.component';
-import { SplashComponent } from './components/splash/splash.component';
+import { SplashComponent } from './routes/splash/splash.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
