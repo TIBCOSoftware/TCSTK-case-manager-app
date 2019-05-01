@@ -5,7 +5,7 @@ import {GeneralConfig} from '@tibco-tcstk/tc-core-lib';
 import {Title} from '@angular/platform-browser';
 
 @Component({
-  selector: 'laapp-starter-app',
+  selector: 'app-starter-app',
   templateUrl: './starter-app.component.html',
   styleUrls: ['./starter-app.component.css'],
   encapsulation: ViewEncapsulation.None

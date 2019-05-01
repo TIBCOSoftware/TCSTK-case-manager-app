@@ -5,11 +5,13 @@ import {
   GeneralConfigResolver,
 } from '@tibco-tcstk/tc-core-lib';
 import {
+  AccessResolver,
   CaseGuard,
   ClaimsResolver,
   GroupsResolver,
   LaConfigResolver,
   LiveAppsConfigResolver,
+  RoleGuard,
   RolesResolver
 } from '@tibco-tcstk/tc-liveapps-lib';
 import {SplashComponent} from '../../components/splash/splash.component';
@@ -29,7 +31,8 @@ export const STARTER_APP_ROUTES =
       claims: ClaimsResolver,
       laConfigHolder: LaConfigResolver,
       groups: GroupsResolver,
-      roles: RolesResolver
+      roles: RolesResolver,
+      access: AccessResolver
     }
   },
   {
@@ -45,11 +48,12 @@ export const STARTER_APP_ROUTES =
       laConfigHolder: LaConfigResolver,
       claims: ClaimsResolver,
       groups: GroupsResolver,
-      roles: RolesResolver
+      roles: RolesResolver,
+      access: AccessResolver
     }
   },
   {
-    path: 'configuration', component: ConfigurationComponent, canActivate: [AuthGuard],
+    path: 'configuration', component: ConfigurationComponent, canActivate: [AuthGuard, RoleGuard],
     resolve: {configurationMenuHolder: ConfigurationMenuConfigResolver},
     children: CONFIGURATION_ROUTE_CONFIG
   },
@@ -69,7 +73,8 @@ export const STARTER_APP_PROVIDERS = [
   GeneralConfigResolver,
   ConfigurationMenuConfigResolver,
   RolesResolver,
-  GroupsResolver
+  GroupsResolver,
+  AccessResolver
   ],
   CONFIGURATION_ROUTE_PROVIDERS
 ];
