@@ -6,6 +6,7 @@ import {
   LiveAppsSettingsComponent, LiveAppsSettingsRecentCasesComponent,
   LiveAppsSettingsRolesComponent, LiveAppsSettingsSummaryCardsComponent
 } from '@tibco-tcstk/tc-liveapps-lib';
+import {HOME_ROUTE} from '../starter-app-route';
 
 export const CONFIGURATION_ROUTE_CONFIG = [
   {
@@ -52,6 +53,12 @@ export const CONFIGURATION_ROUTE_CONFIG = [
       laConfigHolder: LaConfigResolver,
       generalConfigHolder: GeneralConfigResolver
     }
+  },
+  {
+    path: '', redirectTo: '/starterApp/configuration/general-application-settings', pathMatch: 'full'
+  },
+  {
+    path: '**', redirectTo: '/starterApp/configuration/general-application-settings'
   }
 ];
 
