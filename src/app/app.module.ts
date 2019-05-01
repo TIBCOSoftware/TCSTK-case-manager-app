@@ -24,7 +24,6 @@ import {StarterAppComponent} from './routes/starter-app/starter-app.component';
 import {CaseComponent} from './routes/case/case.component';
 import { ConfigurationComponent } from './routes/configuration/configuration.component';
 import { SplashComponent } from './components/splash/splash.component';
-import { SplashPDComponent } from './components/splash-pd/splash-pd.component';
 import { ReportingComponent } from './routes/reporting/reporting.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -37,7 +36,6 @@ import { AppRoutingModule } from './app-routing.module';
     CaseComponent,
     ConfigurationComponent,
     SplashComponent,
-    SplashPDComponent,
     ReportingComponent
   ],
   imports: [
