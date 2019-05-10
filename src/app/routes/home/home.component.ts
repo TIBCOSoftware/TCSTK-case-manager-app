@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {GeneralConfig, UiAppConfig, RouteAction, Claim} from '@tibco-tcstk/tc-core-lib';
 import {CaseRoute, CaseType, LiveAppsConfig, Groups, Roles, RouteAccessControlConfig} from '@tibco-tcstk/tc-liveapps-lib';
+import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
   public groups: Groups;
   public roles: Roles;
   public access: RouteAccessControlConfig;
+  public customFormDefs: CustomFormDefs;
 
   public welcomeMessage: string;
 
@@ -65,6 +67,7 @@ export class HomeComponent implements OnInit {
     this.roles = this.route.snapshot.data.roles;
     this.access = this.route.snapshot.data.access;
     this.sandboxId = this.route.snapshot.data.claims.primaryProductionSandbox.id;
+    this.customFormDefs = this.route.snapshot.data.customFormDefs;
     this.userName = this.claims.firstName + ' ' + this.claims.lastName;
     this.email = this.claims.email;
     this.userId = this.claims.id;

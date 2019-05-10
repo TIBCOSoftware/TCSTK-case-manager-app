@@ -4,6 +4,7 @@ import {LiveAppsConfig, Groups, Roles, RouteAccessControlConfig} from '@tibco-tc
 import { Claim, Sandbox } from '@tibco-tcstk/tc-core-lib';
 
 import {GeneralConfig, RouteAction} from '@tibco-tcstk/tc-core-lib';
+import {CustomFormDefs} from '@tibco-tcstk/tc-forms-lib';
 
 @Component({
   selector: 'app-case',
@@ -23,6 +24,7 @@ export class CaseComponent implements OnInit {
   public groups: Groups;
   public roles: Roles;
   public access: RouteAccessControlConfig;
+  public customFormDefs: CustomFormDefs;
 
   public layout: any[] = undefined;
   // case data is laid out using a default layout inside <tcla-live-apps-case-cockpit>
@@ -56,6 +58,7 @@ export class CaseComponent implements OnInit {
     this.groups = this.route.snapshot.data.groups;
     this.roles = this.route.snapshot.data.roles;
     this.access = this.route.snapshot.data.access;
+    this.customFormDefs = this.route.snapshot.data.customFormDefs;
     this.sandbox = this.claims.primaryProductionSandbox;
     this.caseRef = this.route.snapshot.params.caseRef;
     this.appId = this.route.snapshot.params.appId;
