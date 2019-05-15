@@ -8,7 +8,7 @@ This setting could then be changed in the configuration section for LiveApps
 ###### Example
 ```json
 {
-  "applicationIds": ["1233", "234"]    <== List of the LA application ID you want to use
+  "applicationIds": [1233, 234]    <== List of the LA application ID you want to use
 }
 
 ```

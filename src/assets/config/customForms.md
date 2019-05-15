@@ -1,6 +1,6 @@
 ###### Configuration file description
 
-This file is used want you want to overide default forms by custom created forms
+This file is used if you want to overide default forms by custom created forms
 
 
 ###### Example
@@ -15,10 +15,7 @@ This file is used want you want to overide default forms by custom created forms
 
 **Notes** that the entry should follow the convention below :
 
-
-TODO
-
-[LA AppName] [Creator/Action] Product Notification_Disabled"
+<applicationName>.<applicationInternalName>.<processType>.<processName>
 
 
 

@@ -5,9 +5,6 @@ This file is used to setup the configuration sections we will show when entering
 ![enter image description here](./configurationMenuConfig.png)
 
 
-TODO EXPLAIN THE ROUTING MECHANISM
-
-
 ###### Example
 ```json
 {  
