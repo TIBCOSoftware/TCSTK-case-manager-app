@@ -85,7 +85,7 @@ buildCloudStarterZip = function (cloudStarter) {
 }
 
 // function that shows all the availible applications in the cloud
-const getAppURL = propsF.Cloud_URL + propsF.appURE;
+const getAppURL = propsF.Cloud_URL + propsF.appURE + '?%24top=200';
 showAvailableApps = function (showTable) {
   var doShowTable = (typeof showTable === 'undefined') ? false : showTable;
   //return new Promise(function (resolve, reject) {
