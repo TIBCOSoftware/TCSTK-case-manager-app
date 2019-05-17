@@ -2,22 +2,13 @@
 const execSync = require('child_process').execSync;
 const syncClient = require('sync-rest-client');
 const git = require('gulp-git');
-const gulpF = require('gulp');
-const clean = require('gulp-clean');
 const fs = require('file-system');
 const rimraf = require("rimraf");
-//const fsynch = require('fs-sync');
-//const replace = require('gulp-replace');
-
-
 const PropertiesReader = require('properties-reader');
 const propertiesF = PropertiesReader('tibco-cloud.properties');
 const propsF = propertiesF.path();
 
-//Convert comma separated library to an Array
-//var libs = propsF.libs.split(',');
-
-
+// Create a directory if it does not exists
 mkdirIfNotExist = function (dir) {
   //var dir = './tmp';
   if (!fs.existsSync(dir)) {
@@ -31,14 +22,6 @@ cleanTemp = function () {
   return deleteFolder(propsF.Workspace_TMPFolder);
 
 }
-
-/*
-deleteFolderOLD = function (folder) {
-  log(INFO, 'Deleting Folder: ' + folder);
-  return gulpF.src(folder, {read: false, allowEmpty: true})
-    .pipe(clean());
-
-}*/
 
 deleteFolder = function (folder) {
   return new Promise(function (resolve, reject) {
@@ -101,29 +84,11 @@ buildCloudStarterZip = function (cloudStarter) {
   });
 }
 
-//Get cloud starter array from settings file
-/*
-const cloudStarters = propsF.Sample_App_Names.split(',');
-
-createCloudStarters = function () {
-  return new Promise(function (resolve, reject) {
-    for (cs of cloudStarters) {
-      createCloudStarter(cs);
-      installLibs(cs);
-      //copyFile('./injects/' + cs + '.ts', './tmp/' + cs + '/src/app/routes/home/home.component.ts');
-      buildCloudStarterZip(cs);
-    }
-    resolve();
-  });
-};*/
-
-
-
-
 // function that shows all the availible applications in the cloud
 const getAppURL = propsF.Cloud_URL + propsF.appURE;
-showAvailableApps = function () {
-  return new Promise(function (resolve, reject) {
+showAvailableApps = function (showTable) {
+  var doShowTable = (typeof showTable === 'undefined') ? false : showTable;
+  //return new Promise(function (resolve, reject) {
     var lCookie = cLogin();
     //log(INFO, 'Login Cookie: ', lCookie);
     var response = syncClient.get(getAppURL, {
@@ -167,10 +132,19 @@ showAvailableApps = function () {
       appTemp['LAST MODIFIED(DAYS)'] = Math.round((now.getTime() - lastModified.getTime()) / (1000 * 60 * 60 * 24));
    }
     //logO(INFO,apps);
-    console.table(apps);
+    if(doShowTable) console.table(apps);
+    return response.body;
+   // resolve();
+ // });
+};
+
+showApps = function(){
+  return new Promise(function (resolve, reject) {
+    showAvailableApps(true);
     resolve();
   });
-};
+}
+
 
 // Function to show claims for the configured user
 const getClaimsURL = propsF.Cloud_URL + propsF.Claims_URE;
@@ -189,21 +163,40 @@ showClaims = function () {
   });
 };
 
-/*
-deployCloudStarters = async function () {
-  for (cs of cloudStarters) {
-    await uploadApp(cs);
-    console.log("DONE DEPLOYING: " + cs);
-  }
-};
+function getCloud(url){
+  const lCookie = cLogin();
+  log(DEBUG, 'Login Cookie: ', lCookie);
+  const response = syncClient.get(url, {
+    headers: {
+      "accept": "application/json",
+      "cookie": "tsc=" + lCookie.tsc + "; domain=" + lCookie.domain
+    }
+  });
+  var re = response.body;
+  //let re = Object.assign({}, response.body);
+  //logO(INFO, re);
+  return re;
+}
 
-publishCloudStarters = async function () {
-  for (cs of cloudStarters) {
-    await publishApp(cs);
-    console.log('APP PUBLISHED: ' + cs);
-    console.log("LOCATION: https://eu.liveapps.cloud.tibco.com/webresource/apps/" + cs + "/index.html#/starterApp/home");
-  }
-};*/
+const getApplicationDetailsURL = propsF.Cloud_URL + propsF.appURE;
+//const getApplicationDetailsURL = 'https://eu.liveapps.cloud.tibco.com/webresource/v1/applications/AppMadeWithSchematic3/applicationVersions/1/artifacts/';
+getApplicationDetails = function (application, version, showTable) {
+    var doShowTable = (typeof showTable === 'undefined') ? false : showTable;
+    var details = {};
+    //console.log(getApplicationDetailsURL +  application + '/applicationVersions/' + version + '/artifacts/');
+    const appDet =  getCloud(getApplicationDetailsURL +  application + '/applicationVersions/' + version + '/artifacts/');
+    //logO(INFO, appDet);
+    var i = 0;
+    for (var det in appDet) {
+      var appTemp = {};
+      appN = i;
+      i++;
+      appTemp['DETAIL NAME'] = appDet[det].name;
+      details[appN] = appTemp;
+    }
+    if(doShowTable) console.table(details);
+    return appDet;
+};
 
 // Function to upload a zip to the LiveApps ContentManagment API
 uploadApp = function (application) {
@@ -276,27 +269,6 @@ getGit = function (source, target, tag) {
   }
 }
 
-
-//   "build_all_libs": "cp tsconfig.build.json tsconfig.json &&
-//   ng build tc-core-lib &&
-//   ng build tc-spotfire-lib && ng build tc-forms-lib && ng build tc-liveapps-lib && ng build tc-handsontable-lib && ng build tc-process-discovery-lib && ng build tc-spotfire-play-lib  && ng build tc-check-workflow-monitor-lib
-//   cp tsconfig.debug.json tsconfig.json",
-
-/*
-npmInstallSpotFireWrapper = function () {
-    return npmInstallSpotFireWrapperLocation(propsF.TCSTLocation);
-}
-
-npmInstallSpotFireWrapperLocation = function (location) {
-    return new Promise(function (resolve, reject) {
-        run('cd ' + location + ' && npm config set @tibco:registry ' + propsF.TCSTSpotfireWrappperRegistry);
-        run('cd ' + location + ' && npm install @tibco/spotfire-wrapper');
-        resolve();
-    });
-}
-
-*/
-
 // Function to install NPM packages
 npmInstall = function (location, package) {
   return new Promise(function (resolve, reject) {
@@ -309,19 +281,6 @@ npmInstall = function (location, package) {
     resolve();
   });
 }
-
-
-/*
-buildLibs = function () {
-  return new Promise(function (resolve, reject) {
-    copyFile('./tsconfig.build.json', './tsconfig.json');
-    for (lib of libs) {
-      run('ng build ./projects/' + propsF.libs_scope + lib);
-    }
-    copyFile('./tsconfig.debug.json', './tsconfig.json');
-    resolve();
-  });
-}; */
 
 // Function to copy a directory
 copyDir = function (fromDir, toDir) {
@@ -349,54 +308,6 @@ deleteFile = function (file) {
 
 }
 
-/*
-replaceInFileOLD = function (source, destination, search, replacement) {
-  log(INFO, '[REPLACE IN FILE] Source:|' + source + '| Destination Folder:|' + destination + '| Search:|' + search + '| Replacement:|' + replacement + '|');
-  return gulpF.src([source])
-    .pipe(replace(search, replacement))
-    .pipe(gulpF.dest(destination));
-}
-
-// Replaces a string in a file
-replaceInFile = function (source, destination, search, replacement) {
-  return new Promise(function (resolve, reject) {
-    log(INFO, '[REPLACE IN FILE] Source:|' + source + '| Destination Folder:|' + destination + '| Search:|' + search + '| Replacement:|' + replacement + '|');
-    if (fsynch.exists(source)) {
-      var data = fsynch.read(source);
-    } else {
-      log(ERROR, 'File does not exist: ' + source);
-    }
-    var result = data.replace(search, replacement);
-    fsynch.write(destination, result);
-    resolve();
-
-  });
-}*/
-
-/*
-publishNpm = function () {
-    return new Promise(function (resolve, reject) {
-        //run('cd '+tcsdkLoc+'/dist/ && npm publish --registry ' + npm_registry);
-        for (lib of libs) {
-            //run('cd ' + propsF.TCSTLocation + 'dist/' + propsF.libs_folder + lib + '/ && npm version patch ');
-            run('cd ' + propsF.TCSTLocation + 'dist/' + propsF.libs_folder + lib + '/ && npm publish --registry ' + propsF.npm_registry);
-        }
-        resolve();
-    });
-};
-
-// Function to remove the NPM packages
-unPublishNpm = function () {
-    return new Promise(function (resolve, reject) {
-        //run('cd '+tcsdkLoc+'/dist/ && npm publish --registry ' + npm_registry);
-        for (lib of libs) {
-            log(INFO, 'Removing package [' + lib + '] from: ' + propsF.npm_registry);
-            run('npm unpublish ' + propsF.libs_scope + lib + ' --force --registry ' + propsF.npm_registry);
-            //run('echo ' + lib);
-        }
-        resolve();
-    });
-};*/
 
 checkPW = function(){
   if(propsF.CloudLogin.pass == null || propsF.CloudLogin.pass == ''){
@@ -404,8 +315,6 @@ checkPW = function(){
     process.exit();
   }
 }
-
-
 
 // Log function
 const INFO = 'INFO';
