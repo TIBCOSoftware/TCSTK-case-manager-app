@@ -3,7 +3,7 @@
 This file is here to initialize, on first browse, the LiveApps application you want to use.
 
 This setting could then be changed in the configuration section for LiveApps
-![enter image description here](./liveAppsconfig.png)
+![enter image description here](./liveAppsConfig.png)
 
 ###### Example
 ```json
