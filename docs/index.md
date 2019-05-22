@@ -1,6 +1,6 @@
 # Pattern Application
-### Case Management App
-TIBCO Cloud LiveApps Case Management App, containing all core and essential Case Management Features to create more advanced Applications.
+### Case Manager App
+TIBCO Cloud LiveApps Case Manager App, containing all core and essential Case Management Features to create more advanced Applications.
 
 ![alt-text](cm-app.png "Image")
 
