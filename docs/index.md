@@ -20,10 +20,12 @@ quicks way to get started
 #### Configure 
 how to configure the App
 
-- [Custom Forms](/src/assets/config/customForms.md)
-- [Link to Application GIT](https://github.com/TIBCOSoftware/TCSTK-case-manager-app/) 
-- [Link to Application GIT](https://github.com/TIBCOSoftware/TCSTK-case-manager-app/) 
-- [Link to Application GIT](https://github.com/TIBCOSoftware/TCSTK-case-manager-app/) 
+- [UI App ID](config/uiAppId.md)
+- [general App Configuration](config/generalAppConfig.md) 
+- [route Access Control](config/routeAccessControl.md)
+- [Custom Forms](config/customForms.md) 
+
+> All Configuration JSON Files can be found in "src/assets/config".
 
 #### Basic Developer
 dome basic Developer focused Details 
