@@ -33,7 +33,7 @@ Role subsection
       "display": "Administrator"
     }
   ],
-  "displayName": true,     <== display Username in main APP Bar
+  "displayName": true,     <== display Username in main APP Bar.
   "documentationUrl": "assets/help.html"
 }
 ```
