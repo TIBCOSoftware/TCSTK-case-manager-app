@@ -12,7 +12,7 @@ This file is used to setup the configuration sections we will show when entering
 ###### Example
 ```javascript
 {  
-  "menu": [      // <== List of the section to display
+  "menu": [       <== List of the section to display
     {  
       "entry": "General Application", // <== Name of the section
       "icon": "tcs-starters-icon",    // <== Icon for the section
