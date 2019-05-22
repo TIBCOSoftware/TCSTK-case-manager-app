@@ -1,3 +1,7 @@
+###### Configuration file name
+
+routeAccessControl.json
+
 ###### Configuration file description
 
 This file is used to setup ACLs for your routes and buttons
@@ -5,16 +9,16 @@ This file is used to setup ACLs for your routes and buttons
 ###### Example
 ```json
 {
-  "routes": [   <== List of routes you want to protect
+  "routes": [  // <== List of routes you want to protect
     {
-      "routeUrl": "configuration",     <== route name
-      "requiredRoleId": "Administrator"  <== role to have to access the route
+      "routeUrl": "configuration",      // <== route name
+      "requiredRoleId": "Administrator" // <== role to have to access the route
     }
   ],
   "buttons": [
     {
-      "buttonId": "configure",       <== button name
-      "requiredRoleId": "Administrator" <== role to have to view the button
+      "buttonId": "configure",          // <== button name
+      "requiredRoleId": "Administrator" // <== role to have to view the button
     },
     {
       "buttonId": "caseStart",
@@ -30,10 +34,11 @@ This file is used to setup ACLs for your routes and buttons
     }
   ]
 }
-
 ```
 
-**Notes** that if a route or button is not mentioned, it will be available for all
+**Notes** 
+
+If a route or button is not mentioned, it will be available for all
 
 
 

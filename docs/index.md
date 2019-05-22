@@ -22,6 +22,7 @@ how to configure the App
 
 - [UI App ID](config/uiAppId.md)
 - [general App Configuration](config/generalAppConfig.md) 
+- [configuration Menu Configuration](config/configurationMenuConfig.md)
 - [route Access Control](config/routeAccessControl.md)
 - [Custom Forms](config/customForms.md) 
 
