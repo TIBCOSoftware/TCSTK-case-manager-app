@@ -1,6 +1,10 @@
-# TcstkCaseManagerApp
+# TCSTK - Case Manager Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Details of the Application [here.](https://tibcosoftware.github.io/TCSTK-case-manager-app)
+
+All used Background Details and Getting Started HowTos [here.](https://tibcosoftware.github.io/TCSToolkit/Angular/docs/1.%20Getting%20Started/)
+
+> This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Development server
 
