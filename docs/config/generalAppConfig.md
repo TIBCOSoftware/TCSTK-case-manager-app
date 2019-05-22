@@ -16,7 +16,7 @@ Role subsection
 
 
 ###### Example
-```bash
+```
 {
   "browserTitle": "Tibco Cloud App",
   "applicationTitle": "Case Manager App (TIBCO LABS™)",
