@@ -4,7 +4,7 @@ TIBCO Cloud LiveApps Case Management App, containing all core and essential Case
 
 ![alt-text](cm-app.png "Image")
 
-[Link to Application GIT](https://github.com/TIBCOSoftware/TCST-Angular/projects/starters/a-cm-app/src)  -   [Link to Component GIT](https://github.com/TIBCOSoftware/TCST-Angular/projects/tibco-tcstk/tc-liveapps-lib/src)
+[Link to Application GIT](https://github.com/TIBCOSoftware/TCSTK-case-manager-app/)  build out of Components from [Link to Component GIT](https://tibcosoftware.github.io/TCSToolkit/Angular/components/liveapps/live-apps-actions/Actions/)
 
 ### Videos 
 #### Pitch elevator 
@@ -19,6 +19,11 @@ quicks way to get started
 
 #### Configure 
 how to configure the App
+
+- [Custom Forms](/src/assets/config/customForms.md)
+- [Link to Application GIT](https://github.com/TIBCOSoftware/TCSTK-case-manager-app/) 
+- [Link to Application GIT](https://github.com/TIBCOSoftware/TCSTK-case-manager-app/) 
+- [Link to Application GIT](https://github.com/TIBCOSoftware/TCSTK-case-manager-app/) 
 
 #### Basic Developer
 dome basic Developer focused Details 
