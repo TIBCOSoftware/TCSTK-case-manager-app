@@ -20,11 +20,11 @@ quicks way to get started
 #### Configure 
 how to configure the App
 
-- [UI App ID](config/uiAppId.md)
-- [general App Configuration](config/generalAppConfig.md) 
-- [configuration Menu Configuration](config/configurationMenuConfig.md)
-- [route Access Control](config/routeAccessControl.md)
-- [Custom Forms](config/customForms.md) 
+- [UI App ID](src/assets/config/uiAppId.md)
+- [general App Configuration](src/assets/config/generalAppConfig.md) 
+- [configuration Menu Configuration](src/assets/config/configurationMenuConfig.md)
+- [route Access Control](src/assets/config/routeAccessControl.md)
+- [Custom Forms](src/assets/config/customForms.md) 
 
 > All Configuration JSON Files can be found in "src/assets/config".
 
@@ -45,7 +45,8 @@ how to deploy the App
 #### Advanced Developer
 more advanced Details
 
-- Review all the components 
+- [Angular Application Instructions](angular.md)
+- Review of all the components 
 - In order to debug or extends the components : get all the sources of the components with a script (getting tagged version of the libs instead of the npm package json link) and get back to NPM when done
 
 ### Slides
