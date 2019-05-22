@@ -10,7 +10,7 @@ This file is used to setup the configuration sections we will show when entering
 ![enter image description here](./configurationMenuConfig.png)
 
 ###### Example
-```json
+```javascript
 {  
   "menu": [      // <== List of the section to display
     {  
