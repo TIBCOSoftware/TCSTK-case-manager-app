@@ -8,7 +8,7 @@ This file is used want to set the main key to access all application configurati
 
 
 ###### Example
-```json
+```javascript
 {
   "uiAppId": "tcstk-case-manager-app"
 }

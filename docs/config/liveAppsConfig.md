@@ -11,7 +11,7 @@ This setting could then be changed in the configuration section for LiveApps.
 ![enter image description here](./liveAppsConfig.png)
 
 ###### Example
-```json
+```javascript
 {
   "applicationIds": [1233, 234]  //  <== List of the LA application ID you want to use
 }

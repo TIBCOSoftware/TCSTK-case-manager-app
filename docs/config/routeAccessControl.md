@@ -7,7 +7,7 @@ routeAccessControl.json
 This file is used to setup ACLs for your routes and buttons
 
 ###### Example
-```json
+```javascript
 {
   "routes": [  // <== List of routes you want to protect
     {

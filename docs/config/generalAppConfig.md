@@ -16,7 +16,7 @@ Role subsection
 
 
 ###### Example
-```
+```javascript
 {
   "browserTitle": "Tibco Cloud App",
   "applicationTitle": "Case Manager App (TIBCO LABS™)",
@@ -33,7 +33,7 @@ Role subsection
       "display": "Administrator"
     }
   ],
-  "displayName": true,     <== display Username in main APP Bar.
+  "displayName": true,   //  <== display Username in main APP Bar.
   "documentationUrl": "assets/help.html"
 }
 ```
