@@ -6,6 +6,8 @@ TIBCO Cloud LiveApps Case Manager App, containing all core and essential Case Ma
 
 [Link to Application GIT](https://github.com/TIBCOSoftware/TCSTK-case-manager-app/)  build out of Components from [Link to Component GIT](https://tibcosoftware.github.io/TCSToolkit/Angular/components/liveapps/live-apps-actions/Actions/)
 
+All used Background Details and Getting Started HowTos [here.](https://tibcosoftware.github.io/TCSToolkit/Angular/docs/1.%20Getting%20Started/)
+
 ### Videos 
 #### Pitch elevator 
 quick video, just max 2 minutes
