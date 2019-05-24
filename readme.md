@@ -2,7 +2,17 @@
 ### Case Manager App
 TIBCO Cloud LiveApps Case Manager App, containing all core and essential Case Management Features to create more advanced Applications.
 
-![alt-text](cm-app.png "Image")
+**Splash Screen**
+
+![alt-text](docs/img/cm-app1.png "Image")
+
+**Cases Overview**
+
+![alt-text](docs/img/cm-app2.png "Image")
+
+**Case Instance Details**
+
+![alt-text](docs/img/cm-app3.png "Image")
 
 [Link to Application GIT](https://github.com/TIBCOSoftware/TCSTK-case-manager-app/)  build out of Components from [Link to Component GIT](https://tibcosoftware.github.io/TCSToolkit/Angular/components/liveapps/live-apps-actions/Actions/)
 
@@ -47,7 +57,7 @@ how to deploy the App
 #### Advanced Developer
 more advanced Details
 
-- [Angular Application Instructions](angular.md)
+- [Angular Application Instructions](docs/angular.md)
 - Review of all the components 
 - In order to debug or extends the components : get all the sources of the components with a script (getting tagged version of the libs instead of the npm package json link) and get back to NPM when done
 
