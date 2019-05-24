@@ -7,11 +7,31 @@ Developer wishes to change the look and feel of the home page component:
 
 1) Developer creates new home page component from schematic in editing tool or cmd line:
 
+To create a new component based on the original Home Page Component :
+- right click on the component folder
+- select "New"/"Angular Schematics..."
+- choos the schematics "New Custom Home Cockpit"
+
 ![](003-home-component-schematic.png)
+
+
+Then you will get the new generated component
 ![](003-new-home-component-directory.png)
 
 
+You will be then able to use this component instead of the original one by replacing the one used in the file 
+
+![](003-edit-original-route-html.png)
+
+
+TODO : add layout change
+
+
+
+
 ###2 - Change the logo
+
+
 
 
 
