@@ -62,7 +62,7 @@ how to deploy the App
 #### Advanced Developer
 more advanced Details
 
-- [005-Advanced Developer Use Cases](docs/tutorials/005-Advanced-Developer-Use-Cases.md)
+- [Advanced Developer Use Cases](docs/tutorials/005-Advanced-Developer-Use-Cases.md)
 - [Angular Application Instructions](docs/angular.md)
 - Review of all the components 
 - In order to debug or extends the components : get all the sources of the components with a script (getting tagged version of the libs instead of the npm package json link) and get back to NPM when done

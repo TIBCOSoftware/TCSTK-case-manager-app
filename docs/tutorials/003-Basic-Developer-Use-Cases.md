@@ -1,6 +1,6 @@
-##Basic Developer Use Cases
+## Basic Developer Use Cases
 
-###1 - Change Home Page layout
+### 1 - Change Home Page layout
 
 Developer wishes to change the look and feel of the home page component:
 (Note initial release will include component schematics for home page, case page, config page, login page, splash page → more sub-components to follow)
@@ -29,7 +29,7 @@ TODO : add layout change
 
 
 
-###2 - Change the logo
+### 2 - Change the logo
 
 
 
