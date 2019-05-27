@@ -57,7 +57,6 @@ how to deploy the App
 more advanced Details
 
 - [Advanced Developer Use Cases](docs/tutorials/005-Advanced-Developer-Use-Cases.md)
-- [Angular Application Instructions](docs/angular.md)
 
 ### Slides
 some PPT Slide Decks
