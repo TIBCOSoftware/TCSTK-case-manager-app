@@ -24,7 +24,7 @@ You will be then able to use this component instead of the original one by repla
 ![](003-edit-original-route-html.png)
 
 
-TODO : add layout change
+> TODO : add layout change
 
 
 
