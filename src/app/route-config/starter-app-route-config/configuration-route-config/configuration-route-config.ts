@@ -1,4 +1,4 @@
-import {GeneralConfigResolver, TibcoCloudSettingsGeneralComponent} from '@tibco-tcstk/tc-core-lib';
+import {GeneralConfigResolver, TibcoCloudSettingsGeneralComponent, TibcoCloudSettingLandingComponent, GeneralLandingPageConfigResolver} from '@tibco-tcstk/tc-core-lib';
 import {
   AllGroupsResolver,
   AllRolesResolver,
@@ -24,6 +24,15 @@ export const CONFIGURATION_ROUTE_CONFIG = [
       claims: ClaimsResolver,
       allRoles: AllRolesResolver,
       allGroups: AllGroupsResolver
+    }
+  },
+  {
+    path: "general-application-landing-page",
+    component: TibcoCloudSettingLandingComponent,
+    resolve: {
+      landingPagesConfigHolder: GeneralLandingPageConfigResolver,
+      claims: ClaimsResolver,
+      allRolesHolder: AllRolesResolver
     }
   },
   {
@@ -65,5 +74,6 @@ export const CONFIGURATION_ROUTE_PROVIDERS = [
   GeneralConfigResolver,
   ClaimsResolver,
   AllRolesResolver,
-  AllGroupsResolver
+  AllGroupsResolver,
+  GeneralLandingPageConfigResolver
 ]

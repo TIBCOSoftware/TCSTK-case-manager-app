@@ -1,0 +1,33 @@
+{
+    "id": "",
+    "version": "1.0",
+    "landingPage": [
+        {
+            "key": "id1",
+            "description": "User",
+            "title": "Welcome to your Case Management App",
+            "subtitle": "A highly customizable Case Management application to manage Live Apps cases",
+            "highlights": [
+                {
+                    "title": "Engage",
+                    "iconURL": "ic-documentation",
+                    "content": "Handle all case related requests in a single place - e.g. create cases, action cases, approve requests."
+                },
+                {
+                    "title": "Collaborate",
+                    "iconURL": "ic-graph",
+                    "content": "Provide in-depth, real-time visibility into the risk investigation process - e.g. high priority cases; action audit trails, etc."
+                },
+                {
+                    "title": "Track",
+                    "iconURL": "ic-graph",
+                    "content": "Provide in-depth, real-time visibility into the risk investigation process - e.g. high priority cases; action audit trails, etc."
+                }
+            ],
+            "backgroundURL": "",
+            "homeRoute": "/starterApp/home/",
+            "roles": ["User"],
+            "priority": 5
+        }
+    ]
+}
