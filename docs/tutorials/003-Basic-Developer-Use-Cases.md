@@ -32,6 +32,10 @@ You will be then able to use this component instead of the original one by repla
 ### 2 - Change the logo
 
 
+> Backlog
 
+- a simple layout 
+- change Change Icon 
+- Understand Share State
 
 

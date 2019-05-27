@@ -47,25 +47,17 @@ how to configure the App
 dome basic Developer focused Details 
 
 - [Basic Developer Use Cases](docs/tutorials/003-Basic-Developer-Use-Cases.md)
-- a simple layout 
-- change Change Icon 
-- Understand Share State
 
 #### Deploy 
 how to deploy the App
 
 - [Deploy Usecase](docs/tutorials/004-Deploy.md)
-- Run a script to zip the app 
-- Deploy app to WRP
-- Configure Users and Roles
 
 #### Advanced Developer
 more advanced Details
 
 - [Advanced Developer Use Cases](docs/tutorials/005-Advanced-Developer-Use-Cases.md)
 - [Angular Application Instructions](docs/angular.md)
-- Review of all the components 
-- In order to debug or extends the components : get all the sources of the components with a script (getting tagged version of the libs instead of the npm package json link) and get back to NPM when done
 
 ### Slides
 some PPT Slide Decks
