@@ -29,8 +29,8 @@ some more advanced Tutorials 2-5 min, otherwise split in multiple Parts of diffe
 #### Get Started 
 quicks way to get started
 
-- [Getting Started](Tutorials/001-Get-started.md)
-- [Configure](Tutorials/002-Configure.md)
+- [Getting Started](docs/tutorials/001-Get-started.md)
+- [Configure](docs/tutorials/002-Configure.md)
 
 #### Configure 
 how to configure the App
@@ -46,7 +46,7 @@ how to configure the App
 #### Basic Developer
 dome basic Developer focused Details 
 
-- [Basic Developer Use Cases](Tutorials/003-Basic-Developer-Use-Cases.md)
+- [Basic Developer Use Cases](docs/tutorials/003-Basic-Developer-Use-Cases.md)
 - a simple layout 
 - change Change Icon 
 - Understand Share State
@@ -54,7 +54,7 @@ dome basic Developer focused Details
 #### Deploy 
 how to deploy the App
 
-- [Deploy Usecase](Tutorials/004-Deploy.md)
+- [Deploy Usecase](docs/tutorials/004-Deploy.md)
 - Run a script to zip the app 
 - Deploy app to WRP
 - Configure Users and Roles
@@ -62,7 +62,7 @@ how to deploy the App
 #### Advanced Developer
 more advanced Details
 
-- [005-Advanced Developer Use Cases](Tutorials/005-Advanced-Developer-Use-Cases.md)
+- [005-Advanced Developer Use Cases](docs/tutorials/005-Advanced-Developer-Use-Cases.md)
 - [Angular Application Instructions](docs/angular.md)
 - Review of all the components 
 - In order to debug or extends the components : get all the sources of the components with a script (getting tagged version of the libs instead of the npm package json link) and get back to NPM when done
