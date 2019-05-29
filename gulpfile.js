@@ -111,7 +111,15 @@ mainT = function() {
   });
 };
 
+test = function() {
+  return new Promise(async function (resolve, reject) {
+    console.log('test...');
 
+    resolve();
+  });
+};
+
+gulp.task('test', test);
 
 gulp.task('help', help);
 help.description = 'Displays this message';
@@ -124,6 +132,9 @@ gulp.task('show-cloud', showClaims);
 showClaims.description = 'Shows basic information on your cloud login. (use this to test your cloud login details)';
 gulp.task('show-apps', showApps);
 showAvailableApps.description = 'Shows all the applications that are deployed in the cloud and their versions.';
+gulp.task('show-application-links', showLinks);
+showLinks.description = 'Shows all the links to the deployed applications (that have and index.html file).';
+
 gulp.task('build', build);
 build.description = 'Build the ZIP file for your project.';
 gulp.task('deploy', deploy);
@@ -175,7 +186,7 @@ function promptGulp() {
 
 const _ = require('lodash');
 const fuzzy = require('fuzzy');
-const gtasks = ['show-cloud', 'show-apps', 'start','build', 'deploy', 'publish', 'clean', 'build-deploy-publish', 'get-cloud-libs-from-git', 'inject-lib-sources', 'undo-lib-sources', 'q', 'exit', 'quit', 'help'];
+const gtasks = ['show-cloud', 'show-apps','show-application-links', 'start','build', 'deploy', 'publish', 'clean', 'build-deploy-publish', 'get-cloud-libs-from-git', 'inject-lib-sources', 'undo-lib-sources', 'q', 'exit', 'quit', 'help'];
 
 //User interaction
 function searchAnswer(answers, input) {
