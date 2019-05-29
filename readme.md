@@ -27,10 +27,10 @@ some more advanced Tutorials 2-5 min, otherwise split in multiple Parts of diffe
 
 ### Help / How to 
 #### Get Started 
-quicks way to get started
+some quicks way to get started
 
-- [Getting Started](./docs/tutorials/001-Getting-started.md)
-- [Configure](docs/tutorials/002-Configure.md)
+- [Getting Started](./docs/tutorials/001&#32;Getting&#32;started.md)
+- [Configure](docs/tutorials/002\ Configure.md)
 
 #### Configure 
 how to configure the App
