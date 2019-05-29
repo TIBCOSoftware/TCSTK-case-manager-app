@@ -46,9 +46,13 @@ run = function (command) {
 //Function that determines which cloud login method to use
 // function to login to the cloud
 var loginURL = propsF.Cloud_URL + propsF.loginURE;
+var loginC = null;
 function cLogin() {
   checkPW();
-  return cloudLoginV3(propsF.CloudLogin.tenantID, propsF.CloudLogin.clientID, propsF.CloudLogin.email, propsF.CloudLogin.pass, loginURL);
+  if(loginC == null){
+    loginC = cloudLoginV3(propsF.CloudLogin.tenantID, propsF.CloudLogin.clientID, propsF.CloudLogin.email, propsF.CloudLogin.pass, loginURL);
+  }
+  return loginC;
 }
 
 // Function that logs into the cloud and returns a cookie
@@ -79,7 +83,7 @@ buildCloudStarterZip = function (cloudStarter) {
     const csURL = '/webresource/apps/' + cloudStarter + '/';
     run('ng build --prod --base-href ' + csURL + 'index.html --deploy-url ' + csURL);
     //copyFile('./tmp/' + cloudStarter + '/tsconfig.build.json', './tmp/' + cloudStarter + '/tsconfig.json');
-    run('cd ./dist/ && zip -r ./../build/' + cloudStarter + '.zip .');
+    run('cd ./dist/'+cloudStarter+'/ && zip -r ./../../build/' + cloudStarter + '.zip .');
     resolve();
   });
 }
@@ -163,6 +167,10 @@ showClaims = function () {
   });
 };
 
+
+
+
+
 function getCloud(url){
   const lCookie = cLogin();
   log(DEBUG, 'Login Cookie: ', lCookie);
@@ -184,7 +192,7 @@ getApplicationDetails = function (application, version, showTable) {
     var doShowTable = (typeof showTable === 'undefined') ? false : showTable;
     var details = {};
     //console.log(getApplicationDetailsURL +  application + '/applicationVersions/' + version + '/artifacts/');
-    const appDet =  getCloud(getApplicationDetailsURL +  application + '/applicationVersions/' + version + '/artifacts/');
+    const appDet =  getCloud(getApplicationDetailsURL +  application + '/applicationVersions/' + version + '/artifacts/?%24top=200');
     //logO(INFO, appDet);
     var i = 0;
     for (var det in appDet) {
@@ -197,6 +205,48 @@ getApplicationDetails = function (application, version, showTable) {
     if(doShowTable) console.table(details);
     return appDet;
 };
+
+//Show all the applications links
+showLinks = function(){
+  return new Promise(function (resolve, reject) {
+    getAppLinks(true);
+    resolve();
+  });
+}
+
+//Get Links to all the applications
+getAppLinks = function(showTable) {
+    log(INFO,'Getting Application Links...');
+    var appLinkTable = {};
+    var apps = showAvailableApps(false);
+    var i = 1;
+    for (app of apps){
+      var appTemp = {};
+      appTemp['APP NAME'] = app.name;
+      var appN = i++;
+      appTemp['PUBLISHED VERSION'] = parseInt(app.publishedVersion);
+      // console.log(app.name, app.publishedVersion);
+      var tempDet = getApplicationDetails(app.name,app.publishedVersion,false);
+      process.stdout.clearLine();
+      process.stdout.cursorTo(0);
+      process.stdout.write("Processing App: (" + appN + '/' + apps.length + ')...');
+      for (appD of tempDet){
+        //console.log(appD.name);
+        if(appD.name.includes("index.html")){
+          // console.log('FOUND INDEX of ' + app.name + ': ' + appD.name);
+          var tempLink = propsF.Cloud_URL + 'webresource/apps/'+encodeURIComponent(app.name)+'/' + appD.name;
+          // console.log('LOCATION: ' + tempLink);
+          appTemp['LINK'] = tempLink;
+        }
+      }
+      appLinkTable[appN] = appTemp;
+    }
+    process.stdout.write('\n');
+    if(showTable) {
+      console.table(appLinkTable);
+    }
+    return appLinkTable;
+}
 
 // Function to upload a zip to the LiveApps ContentManagment API
 uploadApp = function (application) {
