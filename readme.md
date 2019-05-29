@@ -46,17 +46,17 @@ how to configure the App
 #### Basic Developer
 dome basic Developer focused Details 
 
-- [Basic Developer Use Cases](docs/tutorials/003-Basic-Developer-Use-Cases.md)
+- [Basic Developer Use Cases](docs/tutorials/003-Basic-Developer.md)
 
 #### Deploy 
 how to deploy the App
 
-- [Deploy Usecase](docs/tutorials/004-Deploy.md)
+- [Deploy Usecase](docs/tutorials/004-Deployment.md)
 
 #### Advanced Developer
 more advanced Details
 
-- [Advanced Developer Use Cases](docs/tutorials/005-Advanced-Developer-Use-Cases.md)
+- [Advanced Developer Use Cases](docs/tutorials/005-Advanced-Developer.md)
 
 ### Slides
 some PPT Slide Decks
