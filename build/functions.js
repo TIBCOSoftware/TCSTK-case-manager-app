@@ -3,7 +3,8 @@ const execSync = require('child_process').execSync;
 const syncClient = require('sync-rest-client');
 const git = require('gulp-git');
 const fs = require('file-system');
-const rimraf = require("rimraf");
+// const rimraf = require("rimraf");
+const del = require('del');
 const PropertiesReader = require('properties-reader');
 const propertiesF = PropertiesReader('tibco-cloud.properties');
 const propsF = propertiesF.path();
@@ -18,17 +19,10 @@ mkdirIfNotExist = function (dir) {
 
 // Clean temp folder
 cleanTemp = function () {
-  log(INFO, 'Cleaning Temp Directory...');
-  return deleteFolder(propsF.Workspace_TMPFolder);
-
-}
-
-deleteFolder = function (folder) {
-  return new Promise(function (resolve, reject) {
-    log(INFO, 'Deleting Folder: ' + folder);
-    rimraf.sync(folder);
-    resolve();
-  });
+  log(INFO, 'Cleaning Temp Directory: ' + propsF.Workspace_TMPFolder);
+  return del([
+    propsF.Workspace_TMPFolder
+  ]);
 }
 
 // Run an OS Command
