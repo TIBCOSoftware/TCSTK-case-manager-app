@@ -5,7 +5,7 @@ You will find here a series of tutorials to help you get started and some more a
 First of all, we want to get you started and get your environment ready with your own version of the Case Manager Application Template.
 
 
-### Installation prerequesites
+### Installation prerequisites
 
 We are using Nodejs, NPM and Angular CLI, so you will have to install all of theses.
 
@@ -16,11 +16,9 @@ node -v
 
 [Install NodeJs](https://nodejs.org/en/download/package-manager/)
 
-
 [Install Angular CLI](https://www.npmjs.com/package/@angular/cli)
 
-####Instructions for Mac 
-
+#### Instructions for Mac 
 
 1.) Using Homebrew you will get the latest version of NodeJS installed running this command
 ```console
@@ -31,25 +29,33 @@ Note if you do not have Homebrew and have an error in the above command, install
 xcode-select --install   
 ```
 
-
 2.) Then install Angular CLI 
 ```console
 npm install -g @angular/cli
 ```
 
-####For Windows 
-TODO @Joerg
+#### Instructions for Windows 
 
+get latest Windows Installer for Node.js and NPM from [here](https://nodejs.org/en/download/) and follow the Installer Steps.
+
+Alternatives
+Using Chocolatey:
+```
+cinst nodejs.install
+```
+Using Scoop:
+```
+scoop install nodejs
+```
 
 ### Use Applicatiton Schematic Template from NPM
+
 1.)  private NPM Server
 Set the registry to the currently private TIBCO Cloud Starter NPM server, for the @tibco-tsctk scope:
 
 ```console
 npm config set @tibco-tcstk:registry http://application-lb-npm-1392137160.eu-west-1.elb.amazonaws.com/
 ```
-
-
 
 2.) Install the CaseManagement App Template
 Install the application template on a global level
