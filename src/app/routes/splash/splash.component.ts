@@ -35,7 +35,7 @@ export class SplashComponent implements OnInit {
         this.highlights.push(new LandingPageItemConfig().deserialize({
             title: highlight.title,
             content: highlight.content,
-            iconURL: TcCoreCommonFunctions.prepareUrlForStaticResource(this.location, highlight.iconURL)
+            iconURL: highlight.iconURL
         }));
 
     });
