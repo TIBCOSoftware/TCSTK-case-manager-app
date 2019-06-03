@@ -51,6 +51,7 @@ scoop install nodejs
 ### Use Applicatiton Schematic Template from NPM
 
 1.)  private NPM Server
+
 Set the registry to the currently private TIBCO Cloud Starter NPM server, for the @tibco-tsctk scope:
 
 ```console
@@ -58,6 +59,7 @@ npm config set @tibco-tcstk:registry http://application-lb-npm-1392137160.eu-wes
 ```
 
 2.) Install the CaseManagement App Template
+
 Install the application template on a global level
 
 ```console
@@ -65,6 +67,7 @@ Install the application template on a global level
 ```
 
 3.) Build App
+
    Build a new cloud starter application using the template
    
    
@@ -73,20 +76,21 @@ Install the application template on a global level
 ```
 
 4.) Start App
-Go into Cloud Starter folder and start it up
-Becarefull, you will need to use only one of the following series of commands depending on where your subscription is based (to know more about this, you can see details here TODO)
 
-The following command will let you use a Europe based subscrition
+Go into Cloud Starter folder and start it up
+Becarefull, you will need to use only one of the following series of commands depending on where your subscription is based 
+
+The following command will let you use a Europe based subscription
 ```console
 cd MyAwesomeCloudStarter/
 npm run serve_eu
 ```
 
-The following command will let you use a US based subscrition
+The following command will let you use a US based subscription
 ```console
 cd MyAwesomeCloudStarter/
 npm run serve_us
 ```
 Now you can browse your Case Manager Application on: https://localhost:4200/
 
-TODO ADD IMAGES OF ALL
+
