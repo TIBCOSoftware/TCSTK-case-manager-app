@@ -49,6 +49,12 @@ function injectLibSources() {
     mkdirIfNotExist('./projects/tibco-tcstk');
     copyDir('./tmp/TCSDK-Angular/projects/tibco-tcstk', './projects/tibco-tcstk');
     //use debug versions
+    var now = new Date();
+    mkdirIfNotExist('./backup/');
+    copyFile('./tsconfig.json', './backup/tsconfig-Before-Debug('+now+').json');
+    copyFile('./angular.json', './backup/angular-Before-Debug('+now+').json');
+    copyFile('./package.json', './backup/package-Before-Debug('+now+').json');
+
     copyFile('./tsconfig.debug.json', './tsconfig.json');
     copyFile('./angular.debug.json', './angular.json');
     copyFile('./package.debug.json', './package.json');
@@ -65,6 +71,12 @@ function undoLibSources() {
   return new Promise(function (resolve, reject) {
     log('INFO', 'Undo-ing Injecting Lib Sources');
     //Move back to Angular build files
+    var now = new Date();
+    mkdirIfNotExist('./backup/');
+    copyFile('./tsconfig.json', './backup/tsconfig-Before-Build('+now+').json');
+    copyFile('./angular.json', './backup/angular-Before-Build('+now+').json');
+    copyFile('./package.json', './backup/package-Before-Build('+now+').json');
+
     copyFile('./tsconfig.build.json', './tsconfig.json');
     copyFile('./angular.build.json', './angular.json');
     copyFile('./package.build.json', './package.json');
@@ -114,6 +126,7 @@ mainT = function() {
 test = function() {
   return new Promise(async function (resolve, reject) {
     console.log('test...');
+    var now = new Date();
 
     resolve();
   });
