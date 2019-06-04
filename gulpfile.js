@@ -90,7 +90,7 @@ help = function(){
   return new Promise(async function (resolve, reject) {
     console.log('                               # |-------------------------------------------|');
     console.log('                               # |  *** T I B C O    C L O U D   C L I ***   |');
-    console.log('                               # |            V1.0.1 (17-5-2019)             |');
+    console.log('                               # |            V1.0.2 (4-6-2019)              |');
     console.log('                               # |-------------------------------------------|');
     log('INFO', 'GULP DETAILS:');
     run('gulp --version');
