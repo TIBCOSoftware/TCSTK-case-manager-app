@@ -51,10 +51,10 @@ function injectLibSources() {
     //use debug versions
     var now = new Date();
     mkdirIfNotExist('./backup/');
+    // Make Backups in the back up folder
     copyFile('./tsconfig.json', './backup/tsconfig-Before-Debug('+now+').json');
     copyFile('./angular.json', './backup/angular-Before-Debug('+now+').json');
     copyFile('./package.json', './backup/package-Before-Debug('+now+').json');
-
     copyFile('./tsconfig.debug.json', './tsconfig.json');
     copyFile('./angular.debug.json', './angular.json');
     copyFile('./package.debug.json', './package.json');
@@ -73,10 +73,10 @@ function undoLibSources() {
     //Move back to Angular build files
     var now = new Date();
     mkdirIfNotExist('./backup/');
+    // Make Backups in the back up folder
     copyFile('./tsconfig.json', './backup/tsconfig-Before-Build('+now+').json');
     copyFile('./angular.json', './backup/angular-Before-Build('+now+').json');
     copyFile('./package.json', './backup/package-Before-Build('+now+').json');
-
     copyFile('./tsconfig.build.json', './tsconfig.json');
     copyFile('./angular.build.json', './angular.json');
     copyFile('./package.build.json', './package.json');
