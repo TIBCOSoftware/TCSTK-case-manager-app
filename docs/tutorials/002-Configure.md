@@ -2,7 +2,7 @@
 
 The Case Manager App comes with easily adjustable Configuration Settings, most of them can be adjusted at anytime within the Application itself in case the User has the "App Configuration Role". In this Case the Settings saved to the App specific Shared State.
 
-> In case the App is installed the first time, the Settings are taken from JSON Configuration Files delivered with the App. These Files contain some more Detailed Settings as what is part of the UI.
+> In case the Application is installed the first time, the Settings are taken from JSON Configuration Files delivered with the App. These JSON Files contain some more detailed Settings as what is available via the UI.
 
 ### General Application Settings
 
