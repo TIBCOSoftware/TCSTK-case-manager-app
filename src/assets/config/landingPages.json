@@ -15,13 +15,13 @@
                 },
                 {
                     "title": "Collaborate",
-                    "iconURL": "ic-graph",
-                    "content": "Provide in-depth, real-time visibility into the risk investigation process - e.g. high priority cases; action audit trails, etc."
+                    "iconURL": "ic-community",
+                    "content": "Collaborate on cases using unstructured data such as notes and documents."
                 },
                 {
                     "title": "Track",
                     "iconURL": "ic-graph",
-                    "content": "Provide in-depth, real-time visibility into the risk investigation process - e.g. high priority cases; action audit trails, etc."
+                    "content": "Track and respond to high priority cases using actions; review status using audit trails."
                 }
             ],
             "backgroundURL": "",
