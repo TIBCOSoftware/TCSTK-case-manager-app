@@ -3,14 +3,17 @@
 TIBCO Cloud LiveApps Case Manager App, containing all core and essential Case Management Features to create more advanced Applications.
 
 **Splash Screen**
+Welcome and Application Overview, fully use case specific adjustable.
 
 ![alt-text](docs/img/cm-app1.png "Image")
 
 **Cases Overview**
+Case Search, Case Statistics, Favorite and Recent Cases Lists, plus Application Collaboration Notes.
 
 ![alt-text](docs/img/cm-app2.png "Image")
 
 **Case Instance Details**
+Milestone Tracker, Case Actions, User Forms, Case Instance Collaboration Notes, Case Document Attachments, State and Audit Trail.
 
 ![alt-text](docs/img/cm-app3.png "Image")
 
@@ -22,8 +25,12 @@ All used Background Details and Getting Started HowTos [here.](https://tibcosoft
 #### Pitch elevator 
 quick video, just max 2 minutes
 
+> TODO
+
 #### Tutorials 
 some more advanced Tutorials 2-5 min, otherwise split in multiple Parts of different topics
+
+> will be added soon
 
 ### Help / How to 
 #### Get Started 
@@ -61,3 +68,4 @@ more advanced Details
 ### Slides
 some PPT Slide Decks
 
+> TODO added to Slideshare as soon public available.
