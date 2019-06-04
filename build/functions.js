@@ -20,10 +20,16 @@ mkdirIfNotExist = function (dir) {
 // Clean temp folder
 cleanTemp = function () {
   log(INFO, 'Cleaning Temp Directory: ' + propsF.Workspace_TMPFolder);
+  return deleteFolder(propsF.Workspace_TMPFolder);
+}
+
+deleteFolder = function (folder) {
+  log(INFO, 'Deleting Folder: ' + folder);
   return del([
-    propsF.Workspace_TMPFolder
+    folder
   ]);
 }
+
 
 // Run an OS Command
 run = function (command) {
