@@ -21,21 +21,7 @@ To create a new component based on the original Home Page Component :
 
 ![](003-edit-original-route-html.png)
 
-### Change the App-Logo
+4.) Finally, you can simply edit the new component template HTML file to change the layout to whatever you like
 
-to change the default Logo inside the Navigation-Bar, just follow the Steps here
-
-1.)
-2.)
-3.)
-
-
-> Backlog
-
-- a simple layout 
-- change Change Icon 
-- layout change
-- Understand Share State
-- implement contextual Help Pages
 
 
