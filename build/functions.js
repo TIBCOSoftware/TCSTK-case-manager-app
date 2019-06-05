@@ -49,8 +49,12 @@ var loginURL = propsF.Cloud_URL + propsF.loginURE;
 var loginC = null;
 function cLogin() {
   checkPW();
+  var pass = propsF.CloudLogin.pass;
+  if(pass.charAt(0) == '#'){
+    pass = Buffer.from(pass, 'base64').toString()
+  }
   if(loginC == null){
-    loginC = cloudLoginV3(propsF.CloudLogin.tenantID, propsF.CloudLogin.clientID, propsF.CloudLogin.email, propsF.CloudLogin.pass, loginURL);
+    loginC = cloudLoginV3(propsF.CloudLogin.tenantID, propsF.CloudLogin.clientID, propsF.CloudLogin.email, pass, loginURL);
   }
   return loginC;
 }
@@ -327,7 +331,6 @@ npmInstall = function (location, package) {
     } else {
       run('cd ' + location + ' && npm install');
     }
-
     resolve();
   });
 }
@@ -364,6 +367,35 @@ checkPW = function(){
     log(ERROR, 'Please provide your password to login to the tibco cloud in the file tibco-cloud.properties (for property: CloudLogin.pass)');
     process.exit();
   }
+}
+
+var readline = require('readline');
+var Writable = require('stream').Writable;
+
+// Function to obfuscate a password
+obfuscate = function () {
+  return new Promise(function (resolve, reject) {
+    var mutableStdout = new Writable({
+      write: function(chunk, encoding, callback) {
+        if (!this.muted)
+          process.stdout.write(chunk, encoding);
+        callback();
+      }
+    });
+    mutableStdout.muted = false;
+    var rl = readline.createInterface({
+      input: process.stdin,
+      output: mutableStdout,
+      terminal: true
+    });
+    log(INFO, 'Please provide the password...')
+    rl.question('Password: ', (password) => {
+      console.log('\nObfuscated password is is: #' + Buffer.from(password).toString('base64'));
+      rl.close();
+      resolve();
+    });
+    mutableStdout.muted = true;
+  });
 }
 
 // Log function

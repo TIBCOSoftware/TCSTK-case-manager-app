@@ -140,6 +140,8 @@ gulp.task('main', mainT);
 gulp.task('default', gulp.series('help', 'main'));
 gulp.task('start', start);
 start.description = 'Starts the cloud starter locally';
+gulp.task('obfuscate', obfuscate);
+obfuscate.description = 'Obfuscates a Password';
 mainT.description = 'Displays this message';
 gulp.task('show-cloud', showClaims);
 showClaims.description = 'Shows basic information on your cloud login. (use this to test your cloud login details)';
@@ -199,7 +201,7 @@ function promptGulp() {
 
 const _ = require('lodash');
 const fuzzy = require('fuzzy');
-const gtasks = ['show-cloud', 'show-apps','show-application-links', 'start','build', 'deploy', 'publish', 'clean', 'build-deploy-publish', 'get-cloud-libs-from-git', 'inject-lib-sources', 'undo-lib-sources', 'q', 'exit', 'quit', 'help'];
+const gtasks = ['show-cloud', 'show-apps','show-application-links', 'obfuscate' ,'start','build', 'deploy', 'publish', 'clean', 'build-deploy-publish', 'get-cloud-libs-from-git', 'inject-lib-sources', 'undo-lib-sources', 'q', 'exit', 'quit', 'help'];
 
 //User interaction
 function searchAnswer(answers, input) {
