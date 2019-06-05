@@ -10,6 +10,7 @@
     "e2e": "ng e2e",
     "serve_eu": "ng serve --proxy-config proxy.conf.prod.eu.json --ssl true --source-map --aot",
     "serve_us": "ng serve --proxy-config proxy.conf.prod.us.json --ssl true --source-map --aot",
+    "serve_au": "ng serve --proxy-config proxy.conf.prod.au.json --ssl true --source-map --aot",
     "build_prod_hash": "ng build --prod --base-href /webresource/apps/tcstk-case-manager-app/index.html --deploy-url /webresource/apps/tcstk-case-manager-app/ && cd ./dist/tcstk-case-manager-app/ && zip -r ./app.zip ./* && cd ../..",
     "build_prod": "ng build --prod --base-href /webresource/apps/tcstk-case-manager-app/ --deploy-url /webresource/apps/tcstk-case-manager-app/ && cd ./dist/tcstk-case-manager-app/ && zip -r ./app.zip ./* && cd ../.."
   },
