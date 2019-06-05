@@ -17,7 +17,7 @@ You can set a help page in:
 
 ```src/assets/help/starterApp/home/help.html```
 
-However when you don't set this help page the context sensative help will look one level higher each time. 
+However when you don't set this help page the context sensitive help will look one level higher each time. 
 So first in:
 
 ```src/assets/help/starterApp/help.html```
