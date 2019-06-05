@@ -1,18 +1,21 @@
 # Pattern Application
 ### Case Manager App
-TIBCO Cloud LiveApps Case Manager App, containing all core and essential Case Management Features to create more advanced Applications.
+TIBCO Cloud Live Apps Case Manager App, containing all core and essential Case Management Features to create more advanced Applications.
 
 **Splash Screen**
+
 Welcome and Application Overview, fully use case specific adjustable.
 
 ![alt-text](docs/img/cm-app1.png "Image")
 
 **Cases Overview**
+
 Case Search, Case Statistics, Favorite and Recent Cases Lists, plus Application Collaboration Notes.
 
 ![alt-text](docs/img/cm-app2.png "Image")
 
 **Case Instance Details**
+
 Milestone Tracker, Case Actions, User Forms, Case Instance Collaboration Notes, Case Document Attachments, State and Audit Trail.
 
 ![alt-text](docs/img/cm-app3.png "Image")
@@ -23,9 +26,11 @@ All used Background Details and Getting Started HowTos [here.](https://tibcosoft
 
 ### Videos 
 #### Pitch elevator 
-quick video, just max 2 minutes
+a quick first video, to get an impression.
 
-> TODO
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x9qW8HhH-mM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Link: [YouTube](https://youtu.be/x9qW8HhH-mM) ~2 min
 
 #### Tutorials 
 some more advanced Tutorials 2-5 min, otherwise split in multiple Parts of different topics

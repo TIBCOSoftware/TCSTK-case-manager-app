@@ -12,14 +12,14 @@ We are using Nodejs, NPM and Angular CLI, so you will have to install all of the
 
 #### Instructions for Mac 
 
+##### 1.) Test if you have NodeJS and NPM installed
 
-##### 1.) Test if you have NodeJS installed
-
-To check if you have NodeJS you can try
+To check if you have NodeJS and NPM you can try
 ```console
 node -v
+npm -v
 ```
-if yes, you can go to 3.)
+if get back the latest Version Numbers, you can go to 3.)
 
 ##### 2.) Install NodeJS if 1.) failed
 Using Homebrew you will get the latest version of NodeJS installed running this command
@@ -32,15 +32,25 @@ Note if you do not have Homebrew and have an error in the above command, install
 xcode-select --install   
 ```
 
-
-##### 2.) Then install Angular CLI 
-Be carefull, your angular cli should be installed with -g (for global)
+##### 3.) Then install Angular CLI 
+Be carefully, your angular cli should be installed with -g (for global)
 
 ```console
 npm install -g @angular/cli
 ```
 
 #### Instructions for Windows 
+
+##### 1.) Test if you have NodeJS installed
+
+To check if you have NodeJS and NPM you can try
+```console
+node -v
+npm -v
+```
+if get back the latest Version Numbers, you can go to 3.)
+
+##### 2.) Install NodeJS and NPM if 1.) failed
 
 get latest Windows Installer for Node.js and NPM from [here](https://nodejs.org/en/download/) and follow the Installer Steps.
 
@@ -54,7 +64,12 @@ Using Scoop:
 scoop install nodejs
 ```
 
+##### 3.) Then install Angular CLI 
+Be carefully, your angular cli should be installed with -g (for global)
 
+```console
+npm install -g @angular/cli
+```
 
 #### Reference websites
 
