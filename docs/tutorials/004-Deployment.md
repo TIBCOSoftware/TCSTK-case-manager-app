@@ -37,3 +37,19 @@ grant access from the App Configurator View.
 ![](004-new-group.png)
 
 > For more Details check 'App Settings', too.
+
+
+#### Browse the app
+
+You can now browse the app there.
+Be care full, this link is static (built on convention)
+Also, you need to be logged on to the subscription you deployed it to (the login page will appear if you are not logged)
+
+- For EU subscription
+
+> https://eu.liveapps.cloud.tibco.com/webresource/apps/{appName}/index.html
+
+- For US subscription
+
+> https://liveapps.cloud.tibco.com/webresource/apps/{appName}/index.html
+

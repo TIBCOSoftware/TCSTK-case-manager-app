@@ -6,31 +6,32 @@ The Case Manager App comes with easily adjustable Configuration Settings, most o
 
 ### General Application Settings
 
-allows to adjust e.g. application title, welcome message, help content
+Allows to adjust e.g. application title, welcome message, help content
 
 ![](002-app-settings-overview.png)
 
 ### Application Roles
 
-allows to change application roles for normal users, administrators and configurators.
+Allows to change application roles for normal users, administrators and configurators.
 
 ![](002-app-settings-roles.png)
 
 ### Landing Page
 
-You can adjust everything you can find on the App Landing Page, make the App more use case specific and re-branded. Even to change the Background Image is quickly possible.
+You can adjust everything you can find on the App Landing Page, make the App more use case specific and re-branded. Even changing the Background Image is quickly possible.
 
 ![](002-app-settings-landing.png)
 
 ### App Selection
 
-Only the here selected TIBCO Cloud™ Live Apps of your Subscription are available within the App. This allows you to deploy multiple 'Case Manager Apps' with different 'uiAppId' (config JSON) and see only some relevant Case Types within one App.
+Only the selected TIBCO Cloud™ Live Apps of your Subscription are available within the App. This allows you to deploy multiple 'Case Manager Apps' with different 'uiAppId' (config JSON) and see only some relevant Case Types within one App.
 
 ![](002-app-settings-apps.png)
 
 ### Recent Cases
 
 Here you can configure what kind of Cases you like to see in the Overview 'Recent Cases' Component.
+Be careful, you need to select the Apps you want to exclude.
 
 ![](002-app-settings-recent.png)
 
@@ -55,3 +56,9 @@ Details about the Files can be found it App Config Section of this Documentation
 ## Shared State
 
 TIBCO Cloud™ Live Apps Shared Client State Service provides a mechanism for storing and publishing UI state information. For these client-specific customization parameters we use just the PUBLIC State - This type of State can be read by all users in the subscription, but can be updated or deleted only by users with App OWNER or AUTHOR roles.
+
+You can access the Shared State Help page :
+
+[Help for EU subscription](https://eu.liveapps.cloud.tibco.com/apps/api-explorer/index.html#/swaggerUi?feature=..~2Fyaml~2Fss-service.v1.yaml)
+
+[Help for US subscription](https://liveapps.cloud.tibco.com/apps/api-explorer/index.html#/swaggerUi?feature=..~2Fyaml~2Fss-service.v1.yaml)
