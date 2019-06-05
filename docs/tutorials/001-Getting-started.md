@@ -50,7 +50,7 @@ scoop install nodejs
 
 ### Use Applicatiton Schematic Template from NPM
 
-#####1.)  private NPM Server
+1.)  private NPM Server
 
 Set the registry to the currently private TIBCO Cloud Starter NPM server, for the @tibco-tsctk scope:
 
@@ -58,7 +58,7 @@ Set the registry to the currently private TIBCO Cloud Starter NPM server, for th
 npm config set @tibco-tcstk:registry http://application-lb-npm-1392137160.eu-west-1.elb.amazonaws.com/
 ```
 
-#####2.) Install the CaseManagement App Template
+2.) Install the CaseManagement App Template
 
 Install the application template on a global level
 
@@ -66,7 +66,7 @@ Install the application template on a global level
    npm install -g @tibco-tcstk/application-template
 ```
 
-#####3.) Build App
+3.) Build App
 
    Build a new cloud starter application using the template
    
@@ -75,7 +75,7 @@ Install the application template on a global level
       ng new --collection=@tibco-tcstk/application-template MyAwesomeCloudStarter
 ```
 
-#####4.) Start App
+4.) Start App
 
 Go into Cloud Starter folder and start it up
 Becarefull, you will need to use only one of the following series of commands depending on where your subscription is based 
@@ -93,7 +93,7 @@ npm run serve_us
 ```
 Now you can browse your Case Manager Application on: https://localhost:4200/
 
-#####6.) Get your ClientID
+6.) Get your ClientID
 
 When you will browse the Case Manager Application you will get ask your subscription Login (your email) and your password but also a ClientID (used as an double security key)
 
@@ -125,7 +125,7 @@ To get this ClientID :
  ![](001-client-id.png)
  
 
-#####5.) Log in the app
+5.) Log in the app
 
 Then you just have to log in with your credentials and the ClientId
 
