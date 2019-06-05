@@ -1,7 +1,7 @@
 ## Deployment
 
 ### Build
-to make an App ready for Deployment you need to run
+To make an App ready for Deployment you need to run
 
 ```
 npm run build_prod
@@ -13,12 +13,19 @@ and a App Zip file is created into the 'dist' Folder.
 
 Afterwards the Zip con be uploaded to TIBCO Cloud LiveApps Web Resource Provisioning (WRP) using the Swagger UI delivered within the API Documentation or using Postman.
 
-direct Link - API-Explorer :: Content Management
 
-Web Resource Provisioner Service (WRP)
-[POST /applications/{appName}/upload/](https://eu.liveapps.cloud.tibco.com/apps/api-explorer/index.html#/swaggerUi?feature=..~2Fyaml~2Fwr-v01.yaml)
+Web Resource Provisioner Service (WRP) links below (depending on you subscription)
 
-Just specify an 'AppName' and select the App.zip File.
+[EU POST /applications/{appName}/upload/](https://eu.liveapps.cloud.tibco.com/apps/api-explorer/index.html#/swaggerUi?feature=..~2Fyaml~2Fwr-v01.yaml)
+
+
+[US POST /applications/{appName}/upload/](https://liveapps.cloud.tibco.com/apps/api-explorer/index.html#/swaggerUi?feature=..~2Fyaml~2Fwr-v01.yaml)
+
+[AU POST /applications/{appName}/upload/](https://au.liveapps.cloud.tibco.com/apps/api-explorer/index.html#/swaggerUi?feature=..~2Fyaml~2Fwr-v01.yaml)
+
+Just specify the 'AppName' with the value you specified when creating the app (should be "MyAwesomeCloudStarter") and select the App.zip File.
+
+
 
 ![](004-swagger.png)
 
