@@ -81,7 +81,11 @@ function undoLibSources() {
     copyFile('./angular.build.json', './angular.json');
     copyFile('./package.build.json', './package.json');
     //Delete Project folder
-    deleteFolder('./projects/');
+    //FIX: Just delete those folders imported...
+    deleteFolder('./projects/tibco-tcstk/tc-core-lib');
+    deleteFolder('./projects/tibco-tcstk/tc-forms-lib');
+    deleteFolder('./projects/tibco-tcstk/tc-liveapps-lib');
+    deleteFolder('./projects/tibco-tcstk/tc-spotfire-lib');
     npmInstall('./');
     resolve();
   });
@@ -107,8 +111,11 @@ start = function(){
     if(props.cloudHost.includes('eu')){
       run('npm run serve_eu');
     }else{
-
-      run('npm run serve_us');
+      if(props.cloudHost.includes('au')){
+        run('npm run serve_au');
+      }else {
+        run('npm run serve_us');
+      }
     }
 
     resolve();

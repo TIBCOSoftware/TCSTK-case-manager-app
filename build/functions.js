@@ -3,6 +3,7 @@ const execSync = require('child_process').execSync;
 const syncClient = require('sync-rest-client');
 const git = require('gulp-git');
 const fs = require('file-system');
+const fse = require('fs-extra');
 // const rimraf = require("rimraf");
 const del = require('del');
 const PropertiesReader = require('properties-reader');
@@ -335,13 +336,12 @@ npmInstall = function (location, package) {
   });
 }
 
+
 // Function to copy a directory
 copyDir = function (fromDir, toDir) {
   log(INFO, 'Copying Directory from: ' + fromDir + ' to: ' + toDir);
-  fs.rmdirSync(toDir);
-  fs.copySync(fromDir, toDir);
+  fse.copySync(fromDir, toDir, { overwrite: true });
 }
-
 // Function to copy a file
 copyFile = function (fromFile, toFile) {
   log(INFO, 'Copying File from: ' + fromFile + ' to: ' + toFile);
