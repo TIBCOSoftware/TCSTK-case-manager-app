@@ -33,9 +33,13 @@ a quick first video, to get an impression.
 Link: [YouTube](https://youtu.be/x9qW8HhH-mM) ~2 min
 
 #### Tutorials 
-some more advanced Tutorials 2-5 min, otherwise split in multiple Parts of different topics
+some more advanced Tutorials from 1-5 minutes, otherwise split we in multiple Parts and different topics.
 
-> will be added soon
+**How to obtain API Key Client ID**
+
+<iframe width="250" height="150" src="https://www.youtube.com/embed/MuzQDo1RPxU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+> more will be added soon
 
 ### Help / How to 
 #### Get Started 
