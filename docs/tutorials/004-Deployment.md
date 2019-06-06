@@ -25,8 +25,8 @@ Just specify the 'AppName' with the value you specified when creating the app (s
 
 ![](004-swagger.png)
 
-> Note: you have to choose the 'AppName' that is configured for your App Build in your package.json 
-> eg. if just pull the 'TCSTK-Case-Manager-App' from GitHub the 'AppName' is ""
+**Note:**
+you have to choose the 'AppName' that is configured for your App Build in your 'package.json' e.g. if just pull the 'TCSTK-Case-Manager-App' from GitHub the 'AppName' is "tcstk-case-manager-app"
 
 ![](004-package-json.png)
 
