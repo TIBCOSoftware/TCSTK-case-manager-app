@@ -1,8 +1,12 @@
 ## Configure
 
-The Case Manager App comes with easily adjustable Configuration Settings, most of them can be adjusted at anytime within the Application itself in case the User has the "App Configuration Role". In this Case the Settings saved to the App specific Shared State.
+The Case Manager App comes with easy adjustable Configuration Settings, most of them can be adjusted at anytime within the Application itself in case the User has the "App Configuration Role". In this Case the Settings is saved to the App specific Shared State.
 
-> In case the Application is installed the first time, the Settings are taken from JSON Configuration Files delivered with the App. These JSON Files contain some more detailed Settings as what is available via the UI.
+> In case the Application is installed the first time (on first browse of the app), the Settings are taken from JSON Configuration Files delivered with the App. These JSON Files contain some more detailed Settings as what is available via the UI.
+
+To browse the screens in the below section, just click on the setting icon on top right of the app
+
+![](002-configure-icon.png)
 
 ### General Application Settings
 
@@ -62,3 +66,5 @@ You can access the Shared State Help page :
 [Help for EU subscription](https://eu.liveapps.cloud.tibco.com/apps/api-explorer/index.html#/swaggerUi?feature=..~2Fyaml~2Fss-service.v1.yaml)
 
 [Help for US subscription](https://liveapps.cloud.tibco.com/apps/api-explorer/index.html#/swaggerUi?feature=..~2Fyaml~2Fss-service.v1.yaml)
+
+[Help for AU subscription](https://au.liveapps.cloud.tibco.com/apps/api-explorer/index.html#/swaggerUi?feature=..~2Fyaml~2Fss-service.v1.yaml)
