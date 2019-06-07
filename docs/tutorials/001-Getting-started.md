@@ -177,7 +177,7 @@ To get this ClientID :
  ![](001-advanced-setting-icon.png)
  
  
- - Click on the button to copy your ClientId
+ - Click on "Display Client ID", then on  "Copy"
  
  ![](001-client-id.png)
  
