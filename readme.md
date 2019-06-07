@@ -39,6 +39,10 @@ some more advanced Tutorials from 1-5 minutes, otherwise split we in multiple Pa
 
 <iframe width="250" height="150" src="https://www.youtube.com/embed/MuzQDo1RPxU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+**Deploy App to WRP using REST API**
+
+<iframe width="250" height="150" src="https://www.youtube.com/embed/vDnxcgUU974" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 > more will be added soon
 
 ### Help / How to 
