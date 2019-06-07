@@ -3,10 +3,10 @@
 
 ### Change Home Page layout
 
-Developer wishes to change the look and feel of the home page component:
-(Note initial release will include component schematics for home page, case page, config page, login page, splash page → more sub-components to follow)
+Developer wishes to change the look and feel of the home page component
+>Note initial release will include component schematics for home page, case page, config page, login page, splash page → more sub-components to follow)
 
-1.) Developer creates new home page component from schematic in editing tool or cmd line:
+#### 1.) Developer creates new home page component from schematic in editing tool or cmd line:
 
 To create a new component based on the original Home Page Component :
 - right click on the component folder
@@ -15,28 +15,32 @@ To create a new component based on the original Home Page Component :
 
 ![](003-home-component-schematic.png)
 
-2.) Then you will get the new generated component
+#### 2.) Then you will get the new generated component
 ![](003-new-home-component-directory.png)
 
-3.) You will be then able to use this component instead of the original one by replacing the one used in the file 
+#### 3.) You will be then able to use this component instead of the original one by replacing the one used in the file 
 
 ![](003-edit-original-route-html.png)
 
 
-4.) Finally, you can simply edit the new component template HTML file to change the layout to whatever you like
+#### 4.) Finally, you can simply edit the new component template HTML file to change the layout to whatever you like
+
+<br>
+<br>
+
 
 
 ### Change Logo
 
 If you want to change the logo on top left, you can do so by :
 
-1.) Edit the file containing the NavBar component
+#### 1.) Edit the file containing the NavBar component
 
 File is in .src/app/routes/starter-app/starter-app-component.html
 
 ![](003-change-logo-1.png)
 
-2.) Add the following parameter to the "tc-cloud-nav-bar" : logoUrl
+#### 2.) Add the following parameter to the "tc-cloud-nav-bar" : logoUrl
 
 You can get the list of parameter with autocompletion in well configured angular editor (here what you could see in webstorm)
 
@@ -44,7 +48,7 @@ You can get the list of parameter with autocompletion in well configured angular
 ![](003-autocompletion-logo.png)
 
 
-3.) Set the new image to be linked to a variable called logoUrl
+#### 3.) Set the new image to be linked to a variable called logoUrl
 
 ```
  [logoUrl]="logoUrl"
@@ -53,7 +57,7 @@ You can get the list of parameter with autocompletion in well configured angular
 ![](003-logoparam-html.png)
 
 
-4.) Create the logoUrl var in the controller of the component
+#### 4.) Create the logoUrl var in the controller of the component
 
 Edit the file .src/app/routes/starter-app/starter-app-component.ts
 
@@ -114,15 +118,16 @@ Line 4, add the proper import to set the image path to the right location (that 
 Line 6, add the proper import to get Location
 
 
-5.) Copy an mylogo.svg to the folder /src/assets/images/
+#### 5.) Copy an mylogo.svg to the folder /src/assets/images/
 
-Note : 
+>Note : 
+>- you might have to create the folder "images"
+>- you can find in here a mylogo.svg
 
-- you might have to create the folder "images"
-- you can find in here a mylogo.svg
 
 
-6.) View the result
+
+#### 6.) View the result
 
 ![](003-result-change.png)
 
