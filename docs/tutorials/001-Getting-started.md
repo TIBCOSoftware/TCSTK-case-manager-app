@@ -35,9 +35,12 @@ xcode-select --install
 ##### 3.) Then install Angular CLI 
 Be carefully, your angular cli should be installed with -g (for global)
 
+
 ```console
 npm install -g @angular/cli
 ```
+
+Note : Depending on your installation, you might have to add sudo in front of the command if you run in any file access error
 
 #### Instructions for Windows 
 
@@ -98,6 +101,8 @@ Install the application template on a global level
 ```console
    npm install -g @tibco-tcstk/application-template
 ```
+
+Note : Depending on your installation, you might have to add sudo in front of the command if you run in any file access error
 
 #### 3.) Build App
 
@@ -172,7 +177,7 @@ To get this ClientID :
  ![](001-advanced-setting-icon.png)
  
  
- - Click on the button to copy your ClientId
+ - Click on "Display Client ID", then on  "Copy"
  
  ![](001-client-id.png)
  
