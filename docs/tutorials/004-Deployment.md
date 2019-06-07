@@ -9,9 +9,11 @@ npm run build_prod
 
 and a App Zip file is created into the 'dist' Folder.
 
+> Note: on Windows you need ZIP the content of the App-Folder currently manually.
+
 #### Upload
 
-Afterwards the Zip con be uploaded to TIBCO Cloud LiveApps Web Resource Provisioning (WRP) using the Swagger UI delivered within the API Documentation or using Postman.
+Afterwards the Zip can be uploaded to TIBCO Cloud LiveApps Web Resource Provisioning (WRP) using the Swagger UI delivered within the API Documentation or using Postman.
 
 Web Resource Provisioner Service (WRP) links below (depending on you subscription)
 
