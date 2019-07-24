@@ -2,6 +2,7 @@
   "name": "tcstk-case-manager-app",
   "version": "1.1.0",
   "scripts": {
+    "tcli": "npm install gulp-cli -g && npm install -g @tibco-tcstk/cloud-cli && tcli",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -50,7 +51,7 @@
     "@angular/cli": "~8.1.2",
     "@angular/compiler-cli": "~8.1.2",
     "@angular/language-service": "~8.1.2",
-    "@tibco-tcstk/component-template": "~1.1.1",
+    "@tibco-tcstk/component-template": "~1.1.3",
     "@types/node": "~12.6.8",
     "child_process": "^1.0.2",
     "codelyzer": "~5.1.0",

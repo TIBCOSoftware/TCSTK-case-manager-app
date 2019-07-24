@@ -23,6 +23,7 @@ import {CaseComponent} from './routes/case/case.component';
 import { ConfigurationComponent } from './routes/configuration/configuration.component';
 import { SplashComponent } from './routes/splash/splash.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PitComponent } from './pit/pit.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     CaseComponent,
     ConfigurationComponent,
-    SplashComponent
+    SplashComponent,
+    PitComponent
   ],
   imports: [
     AppRoutingModule,
