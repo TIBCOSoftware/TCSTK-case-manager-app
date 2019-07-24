@@ -31,7 +31,7 @@ function publish() {
   return new Promise(async function (resolve, reject) {
     await publishApp(props.App_Name);
     log('INFO', 'APP PUBLISHED: ' + props.App_Name);
-    log('INFO', "LOCATION: https://eu.liveapps.cloud.tibco.com/webresource/apps/" + props.App_Name + "/index.html#/starterApp/home");
+    log('INFO', "LOCATION: " + props.Cloud_URL + "/webresource/apps/" + props.App_Name + "/index.html#/starterApp/home");
     resolve();
   });
 }
