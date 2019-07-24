@@ -57,6 +57,11 @@ function cLogin() {
   if(loginC == null){
     loginC = cloudLoginV3(propsF.CloudLogin.tenantID, propsF.CloudLogin.clientID, propsF.CloudLogin.email, pass, loginURL);
   }
+  if(loginC == 'ERROR'){
+    // TODO: exit the gulp task properly
+    log(INFO, 'Error Exiting..');
+    process.exit();
+  }
   return loginC;
 }
 
@@ -70,15 +75,21 @@ function cloudLoginV3(tenantID, clientID, email, pass, TCbaseURL) {
     headers: {"Content-Type": "application/x-www-form-urlencoded"},
     payload: postForm
   });
-  var loginCookie = response.headers['set-cookie'];
-  logO(DEBUG, loginCookie);
-  var rxd = /domain=(.*?);/g;
-  var rxt = /tsc=(.*?);/g;
-  var re = {"domain": rxd.exec(loginCookie)[1], "tsc": rxt.exec(loginCookie)[1]};
-  logO(DEBUG, re.domain);
-  logO(DEBUG, re.tsc);
-  logO(DEBUG, re);
-  log(INFO, 'Login Successful...');
+  var re = '';
+  if(response.body.errorMsg != null){
+    log(ERROR, response.body.errorMsg);
+    re = 'ERROR';
+  }else {
+    var loginCookie = response.headers['set-cookie'];
+    logO(DEBUG, loginCookie);
+    var rxd = /domain=(.*?);/g;
+    var rxt = /tsc=(.*?);/g;
+    re = {"domain": rxd.exec(loginCookie)[1], "tsc": rxt.exec(loginCookie)[1]};
+    logO(DEBUG, re.domain);
+    logO(DEBUG, re.tsc);
+    logO(DEBUG, re);
+    log(INFO, 'Login Successful...');
+  }
   return re;
 }
 
