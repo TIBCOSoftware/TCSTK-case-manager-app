@@ -5,7 +5,7 @@
         {
             "roleId": "Administrator",
             "routes": ["/starterApp/configuration"],
-            "buttonIds": ["configure"]
+            "buttonIds": ["caseStart","refresh","favorite","configure"]
         },
         {
             "roleId": "User",
