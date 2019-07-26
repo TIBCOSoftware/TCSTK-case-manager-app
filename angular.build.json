@@ -13,6 +13,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "sourceMap": {
+              "scripts": true,
+              "styles": true,
+              "hidden": true,
+              "vendor": true
+            },
             "outputPath": "dist/tcstk-case-manager-app",
             "index": "src/index.html",
             "main": "src/main.ts",
