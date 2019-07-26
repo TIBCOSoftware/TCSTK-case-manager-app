@@ -4,7 +4,7 @@ import {
   AllRolesResolver,
   ClaimsResolver, LaConfigResolver,
   LiveAppsSettingsComponent, LiveAppsSettingsRecentCasesComponent,
-  LiveAppsSettingsRolesComponent, LiveAppsSettingsSummaryCardsComponent
+  LiveAppsSettingsRolesComponent, LiveAppsSettingsSummaryCardsComponent, AccessControlConfigurationResolver, LiveAppsSettingsAccessControlComponent
 } from '@tibco-tcstk/tc-liveapps-lib';
 
 export const CONFIGURATION_ROUTE_CONFIG = [
@@ -33,6 +33,15 @@ export const CONFIGURATION_ROUTE_CONFIG = [
       landingPagesConfigHolder: GeneralLandingPageConfigResolver,
       claims: ClaimsResolver,
       allRolesHolder: AllRolesResolver
+    }
+  },
+  {
+    path: "general-application-access-control",
+    component: LiveAppsSettingsAccessControlComponent,
+    resolve: {
+      claims: ClaimsResolver,
+      accessControlConfigHolder: AccessControlConfigurationResolver,
+      allRoles: AllRolesResolver
     }
   },
   {
@@ -75,5 +84,6 @@ export const CONFIGURATION_ROUTE_PROVIDERS = [
   ClaimsResolver,
   AllRolesResolver,
   AllGroupsResolver,
-  GeneralLandingPageConfigResolver
+  GeneralLandingPageConfigResolver,
+  AccessControlConfigurationResolver
 ]
