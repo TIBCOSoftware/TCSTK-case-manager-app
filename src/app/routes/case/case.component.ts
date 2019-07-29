@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
-import {LiveAppsConfig, Groups, Roles, RouteAccessControlConfig} from '@tibco-tcstk/tc-liveapps-lib';
+import {LiveAppsConfig, Groups, Roles, RouteAccessControlConfigurationElement} from '@tibco-tcstk/tc-liveapps-lib';
 import { Claim, Sandbox } from '@tibco-tcstk/tc-core-lib';
 
 import {GeneralConfig, RouteAction} from '@tibco-tcstk/tc-core-lib';
@@ -23,7 +23,7 @@ export class CaseComponent implements OnInit {
   public typeId: string;
   public groups: Groups;
   public roles: Roles;
-  public access: RouteAccessControlConfig;
+  public access: RouteAccessControlConfigurationElement;
   public customFormDefs: CustomFormDefs;
 
   public layout: any[] = undefined;
