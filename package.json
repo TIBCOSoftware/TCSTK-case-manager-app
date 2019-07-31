@@ -50,7 +50,7 @@
     "@angular/cli": "~8.1.2",
     "@angular/compiler-cli": "~8.1.2",
     "@angular/language-service": "~8.1.2",
-    "@tibco-tcstk/component-template": "~1.1.4",
+    "@tibco-tcstk/component-template": "^1.1.8",
     "@types/node": "~12.6.8",
     "codelyzer": "~5.1.0",
     "ts-node": "~8.3.0",
