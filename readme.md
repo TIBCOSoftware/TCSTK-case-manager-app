@@ -24,7 +24,6 @@ Milestone Tracker, Case Actions, User Forms, Case Instance Collaboration Notes, 
 All used Background Details and Getting Started HowTos [here.](https://tibcosoftware.github.io/TCSToolkit/Angular/docs/1.%20Getting%20Started/)
 
 ### Videos 
-#### Pitch elevator 
 a quick first video, to get an impression.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x9qW8HhH-mM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
