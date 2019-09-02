@@ -1,6 +1,6 @@
 {
   "name": "tcstk-case-manager-app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "tcli": "npm install gulp-cli -g && npm install -g @tibco-tcstk/cloud-cli && tcli",
     "ng": "ng",
