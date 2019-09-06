@@ -7,11 +7,6 @@
       "id": "User",
       "group": "System: ALL_USERS",
       "display": "User"
-    },
-    {
-      "id": "Administrator",
-      "group": "System: ADMINISTRATOR",
-      "display": "Administrator"
     }
   ],
   "displayName": true,
