@@ -1,4 +1,10 @@
-## Deployment
+## How to deploy your App to TIBCO Cloud
+
+Video Link of this Tutorial
+
+<iframe width="250" height="150" src="https://www.youtube.com/embed/vDnxcgUU974" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Detailed Steps
 
 ### Build
 To make an App ready for Deployment you need to run

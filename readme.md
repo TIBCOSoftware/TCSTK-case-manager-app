@@ -30,15 +30,6 @@ a quick first video, to get an impression.
 
 Link: [YouTube](https://youtu.be/x9qW8HhH-mM) ~2 min
 
-#### Tutorials 
-some more advanced Tutorials from 1-5 minutes, otherwise split we in multiple Parts and different topics.
-
-**Deploy App to WRP using REST API**
-
-<iframe width="250" height="150" src="https://www.youtube.com/embed/vDnxcgUU974" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-> more will be added soon
-
 ### Help / How to 
 #### Get Started 
 some quicks way to get started
