@@ -21,7 +21,7 @@ Milestone Tracker, Case Actions, User Forms, Case Instance Collaboration Notes, 
 
 [Link to Application GIT](https://github.com/TIBCOSoftware/TCSTK-case-manager-app/)  build out of Components from [Link to Component GIT](https://tibcosoftware.github.io/TCSToolkit/Angular/components/liveapps/live-apps-actions/Actions/)
 
-All used Background Details and Getting Started HowTos [here.](https://tibcosoftware.github.io/TCSToolkit/Angular/docs/1.%20Getting%20Started/)
+All used Background Details and Getting Started HowTos [here.](https://tibcosoftware.github.io/TCSToolkit/Angular/docs/1.%20Prerequisites/)
 
 ### Videos 
 a quick first video, to get an impression.
@@ -34,7 +34,7 @@ Link: [YouTube](https://youtu.be/x9qW8HhH-mM) ~2 min
 #### Get Started 
 some quicks way to get started
 
-- [Getting Started](docs/tutorials/001-Getting-started.md)
+- [Getting Started](docs/tutorials/001-Get-your-ClientID.md)
 - [Configure](docs/tutorials/002-Configure.md)
 
 #### Configure 
