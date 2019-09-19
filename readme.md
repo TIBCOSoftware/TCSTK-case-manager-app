@@ -1,4 +1,4 @@
-### TIBCO Cloud™ Starters Toolkit -- Case Manager App
+### TIBCO Cloud™ Starters Toolkit - Case Manager App
 TIBCO Cloud™ Live Apps Case Manager App, containing all core and essential Case Management Features to create more advanced Applications.
 
 **Splash Screen**
@@ -63,8 +63,7 @@ more advanced Details
 
 - [Advanced Developer Use Cases](docs/tutorials/005-Advanced-Developer.md)
 
-# License
-
+## License
 Copyright © 2019. TIBCO Software Inc.
 This file is subject to the license terms contained
 in the license file that is distributed with this file.
