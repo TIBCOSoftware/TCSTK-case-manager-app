@@ -9,37 +9,20 @@ import { Location } from '@angular/common';
   styleUrls: ['./splash.component.css']
 })
 export class SplashComponent implements OnInit {
+    public uiAppId: string
+    public roleId: string;
 
-  public title: string;
-  public subTitle: string;
-  public highlights: LandingPageItemConfig[];
-  public navigateURL: string;
+    constructor(private router: Router, private route: ActivatedRoute, private location: Location) {
+    }
 
-  constructor(private router: Router, private route: ActivatedRoute, private location: Location) {
-  }
+    public handleGetStarted = (event: any): void => {
+        // get started - navigate to home
+        this.router.navigate([event.context]);
+    }
 
-  public handleGetStarted = (event) => {
-    // get started - navigate to home
-    this.router.navigate([this.navigateURL]);
-  }
-
-  ngOnInit() {
-    const splash_config = this.route.snapshot.data.landingPagesConfigHolder.landingPage[0];
-
-    this.title = splash_config.title;
-    this.subTitle = splash_config.subtitle;
-    //   this.backgroundImage = TcCoreCommonFunctions.prepareUrlForStaticResource(this.location, splash_config.backgroundURL);
-
-    this.highlights = new Array();
-    splash_config.highlights.forEach(highlight => {
-        this.highlights.push(new LandingPageItemConfig().deserialize({
-            title: highlight.title,
-            content: highlight.content,
-            iconURL: highlight.iconURL
-        }));
-
-    });
-    this.navigateURL = splash_config.homeRoute;
-  }
+    ngOnInit() {
+        this.uiAppId = this.route.snapshot.data.generalConfigHolder.uiAppId;
+        this.roleId = this.route.snapshot.data.activeRoleHolder.id;
+    }
 
 }
