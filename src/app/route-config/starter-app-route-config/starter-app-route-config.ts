@@ -45,7 +45,8 @@ export const STARTER_APP_ROUTES =
     canActivate: [AuthGuard],
       resolve: {
           generalConfigHolder: GeneralConfigResolver,
-          activeRoleHolder: RoleActiveResolver
+          activeRoleHolder: RoleActiveResolver,
+          landingPages: GeneralLandingPageConfigResolver
       }
   },
   {
