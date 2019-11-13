@@ -1,5 +1,5 @@
 ### TIBCO Cloud™ Starters Toolkit - Case Manager App
-TIBCO Cloud™ Live Apps Case Manager App, containing all core and essential Case Management Features to create more advanced Applications.
+The Pattern - Case Manager App, containing all core and essential Case Management Features to create more advanced low-code applications based on TIBCO Cloud™ LiveApps.
 
 **Splash Screen**
 
