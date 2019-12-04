@@ -26,7 +26,8 @@
             ],
             "backgroundURL": "",
             "homeRoute": "/starterApp/home/",
-            "roles": ["User", "Administrator"]
+            "roles": ["User", "Administrator"],
+            "priority": 5
         }
     ]
 }
