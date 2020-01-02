@@ -64,7 +64,7 @@ more advanced Details
 - [Advanced Developer Use Cases](docs/tutorials/005-Advanced-Developer.md)
 
 ## License
-Copyright © 2019. TIBCO Software Inc.
+Copyright © 2020. TIBCO Software Inc.<br>
 This file is subject to the license terms contained in the license file that is distributed with this file.
 
 Please see 'tpc.txt' for details of license and dependent third party components referenced by this library.
