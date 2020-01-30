@@ -29,7 +29,7 @@ import {CaseComponent} from './routes/case/case.component';
 import { ConfigurationComponent } from './routes/configuration/configuration.component';
 import { SplashComponent } from './routes/splash/splash.component';
 import { AppRoutingModule } from './app-routing.module';
-import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
 
 /** This is the tc core configuration object
  * To use oauth you must also add the OAuthInterceptor to providers
