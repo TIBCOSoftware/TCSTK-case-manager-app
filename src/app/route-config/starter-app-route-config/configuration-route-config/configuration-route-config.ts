@@ -1,10 +1,22 @@
-import {GeneralConfigResolver, TibcoCloudSettingsGeneralComponent, TibcoCloudSettingLandingComponent, GeneralLandingPageConfigResolver} from '@tibco-tcstk/tc-core-lib';
+import {
+  GeneralConfigResolver,
+  GeneralLandingPageConfigResolver,
+  TibcoCloudSettingLandingComponent,
+  TibcoCloudSettingsGeneralComponent
+} from '@tibco-tcstk/tc-core-lib';
 import {
   AllGroupsResolver,
   AllRolesResolver,
-  ClaimsResolver, LaConfigResolver,
-  LiveAppsSettingsComponent, LiveAppsSettingsRecentCasesComponent,
-  LiveAppsSettingsRolesComponent, LiveAppsSettingsSummaryCardsComponent, AccessControlConfigurationResolver, LiveAppsSettingsAccessControlComponent, LiveAppsSettingsFormsComponent, LiveAppsSettingsLandingComponent
+  ClaimsResolver,
+  LaConfigResolver,
+  LiveAppsSettingsComponent,
+  LiveAppsSettingsRecentCasesComponent,
+  LiveAppsSettingsRolesComponent,
+  LiveAppsSettingsSummaryCardsComponent,
+  LiveAppsSettingsAccessControlComponent,
+  AccessControlConfigurationResolver,
+  LiveAppsSettingsFormsComponent,
+  LiveAppsSettingsLandingComponent, LiveAppsSettingsFormLayoutComponent, FormConfigResolver
 } from '@tibco-tcstk/tc-liveapps-lib';
 
 export const CONFIGURATION_ROUTE_CONFIG = [
@@ -81,7 +93,14 @@ export const CONFIGURATION_ROUTE_CONFIG = [
     }
   },
   {
-    path: '', redirectTo: '/starterApp/configuration/general-application-settings', pathMatch: 'full'
+    path: 'live-apps-form-layout',
+    component: LiveAppsSettingsFormLayoutComponent,
+    resolve: {
+      claims: ClaimsResolver,
+      laConfigHolder: LaConfigResolver,
+      generalConfigHolder: GeneralConfigResolver,
+      formConfig: FormConfigResolver
+    }
   },
   {
     path: '**', redirectTo: '/starterApp/configuration/general-application-settings'
@@ -94,5 +113,6 @@ export const CONFIGURATION_ROUTE_PROVIDERS = [
   AllRolesResolver,
   AllGroupsResolver,
   GeneralLandingPageConfigResolver,
-  AccessControlConfigurationResolver
-]
+  AccessControlConfigurationResolver,
+  FormConfigResolver
+];

@@ -16,7 +16,9 @@
       "options": [
         "App Selection",
         "Recent Cases",
-        "Summary Cards"
+        "Summary Cards",
+        "Forms",
+        "Form Layout"
       ]
     }
   ]
