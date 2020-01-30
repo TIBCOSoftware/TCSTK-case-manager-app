@@ -56,7 +56,7 @@ const tcCoreConfig: TcCoreConfig = {
   ],
   imports: [
     AppRoutingModule,
-    TcCoreLibModule.forRoot(),
+    TcCoreLibModule.forRoot(tcCoreConfig),
     TcFormsLibModule,
     TcLiveappsLibModule.forRoot(),
     FlexLayoutModule,
