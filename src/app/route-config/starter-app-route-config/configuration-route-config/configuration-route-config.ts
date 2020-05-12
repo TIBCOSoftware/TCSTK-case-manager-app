@@ -16,7 +16,8 @@ import {
   LiveAppsSettingsAccessControlComponent,
   AccessControlConfigurationResolver,
   LiveAppsSettingsFormsComponent,
-  LiveAppsSettingsLandingComponent, LiveAppsSettingsFormLayoutComponent, FormConfigResolver
+  LiveAppsSettingsLandingComponent, LiveAppsSettingsFormLayoutComponent, FormConfigResolver,
+  LiveAppsSettingsCustomFormsComponent
 } from '@tibco-tcstk/tc-liveapps-lib';
 
 export const CONFIGURATION_ROUTE_CONFIG = [
@@ -90,6 +91,16 @@ export const CONFIGURATION_ROUTE_CONFIG = [
       claims: ClaimsResolver,
       laConfigHolder: LaConfigResolver,
       generalConfigHolder: GeneralConfigResolver
+    }
+  },
+  {
+    path: 'live-apps-custom-form-registry',
+    component: LiveAppsSettingsCustomFormsComponent,
+    resolve: {
+      claims: ClaimsResolver,
+      laConfigHolder: LaConfigResolver,
+      generalConfigHolder: GeneralConfigResolver,
+      formConfig: FormConfigResolver
     }
   },
   {
