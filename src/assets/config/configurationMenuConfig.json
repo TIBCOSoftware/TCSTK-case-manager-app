@@ -21,6 +21,13 @@
         "Custom Form Registry",
         "Form Layout"
       ]
+    },
+    {
+      "entry": "Messaging",
+      "icon": "tcs-messaging-sm-icon",
+      "options": [
+        "Connections"
+      ]
     }
   ]
 }
