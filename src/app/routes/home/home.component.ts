@@ -36,6 +36,10 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
+  handleLoad = (data) => {
+    console.log(data);
+  }
+
   // Components used by this route can output a route action using an event emitter
   // This handler will fire on these events and navigate to the appropriate route
 
@@ -44,7 +48,7 @@ export class HomeComponent implements OnInit {
       const caseRoute = new CaseRoute().deserialize(routeAction.context);
       // case clicked - navigate to case - note need to pass appId and caseId
       if (routeAction.context.workitemId) {
-        this.router.navigate(['/starterApp/case/' + caseRoute.appId + '/' + caseRoute.typeId + '/' + caseRoute.caseRef, {workitemId: routeAction.context.workitemId}]);
+        this.router.navigate(['/starterApp/case/' + caseRoute.appId + '/' + caseRoute.typeId + '/' + caseRoute.caseRef, {workitemId: routeAction.context.workitemId, workitemName: routeAction.context.workitemName}]);
       } else {
         this.router.navigate(['/starterApp/case/' + caseRoute.appId + '/' + caseRoute.typeId + '/' + caseRoute.caseRef]);
       }
