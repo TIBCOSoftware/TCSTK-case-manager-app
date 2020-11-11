@@ -401,7 +401,7 @@ try {
     }
   }
 } catch (err) {
-  console.warn('No oauth token found in tibco-cloud.properties');
+  console.warn('Warning on Injecting OAUTH, likely tibco-cloud.properties does not exits, or you need to run: npm install --save-dev properties-reader');
 }
 
 module.exports = PROXY_CONFIG;
