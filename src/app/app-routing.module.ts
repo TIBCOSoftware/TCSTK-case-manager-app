@@ -4,7 +4,7 @@ import {CORE_PROVIDERS, CORE_ROUTES} from './route-config/core-route-config';
 
 @NgModule({
   // hash routing
-  imports: [RouterModule.forRoot(CORE_ROUTES, { useHash: true })],
+  imports: [RouterModule.forRoot(CORE_ROUTES, { useHash: false })],
   // non-hash routing
   // imports: [RouterModule.forRoot(CORE_ROUTES)],
   exports: [RouterModule],

@@ -50,8 +50,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -162,5 +161,8 @@
       }
     }
   },
-  "defaultProject": "tcstk-case-manager-app"
+  "defaultProject": "tcstk-case-manager-app",
+  "cli": {
+    "analytics": "e9693321-b105-4b9a-a6d4-0db467b7fc8c"
+  }
 }
