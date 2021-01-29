@@ -384,17 +384,29 @@ try {
     if (tcProp) {
       const cloudProps = tcProp.path();
       if (cloudProps.CloudLogin && cloudProps.CloudLogin.OAUTH_Token && cloudProps.CloudLogin.OAUTH_Token.trim() != '') {
-        for (let endpoint in PROXY_CONFIG) {
-          //console.log('ENDPOINT: ' , endpoint);
-          //console.log(PROXY_CONFIG[endpoint]['headers']);
-          let token = cloudProps.CloudLogin.OAUTH_Token;
-          const key = 'Token:';
-          if (token.indexOf(key) > 0) {
-            token = token.substring(token.indexOf(key) + key.length);
+        let token = cloudProps.CloudLogin.OAUTH_Token;
+        if(token == 'USE-GLOBAL'){
+          const { resolve } = require('path')
+          const globalPath = resolve(process.execPath, '../../lib/node_modules');
+          const globalProp = propReader(globalPath + '/@tibco-tcstk/common/global-tibco-cloud.properties').path();
+          if (globalProp.CloudLogin && globalProp.CloudLogin.OAUTH_Token && globalProp.CloudLogin.OAUTH_Token.trim() != '') {
+            token = globalProp.CloudLogin.OAUTH_Token;
+          } else {
+            console.error('Token set to USE-GLOBAL, but no global token found...');
           }
-          if (PROXY_CONFIG[endpoint] && PROXY_CONFIG[endpoint]['headers']) {
-            PROXY_CONFIG[endpoint]['headers']['Authorization'] = "Bearer " + token;
-            console.log('Added OAUTH to: ' + endpoint);
+        }
+        if(token != 'USE-GLOBAL') {
+          for (let endpoint in PROXY_CONFIG) {
+            // console.log('ENDPOINT: ' , endpoint);
+            // console.log(PROXY_CONFIG[endpoint]['headers']);
+            const key = 'Token:';
+            if (token.indexOf(key) > 0) {
+              token = token.substring(token.indexOf(key) + key.length);
+            }
+            if (PROXY_CONFIG[endpoint] && PROXY_CONFIG[endpoint]['headers']) {
+              PROXY_CONFIG[endpoint]['headers']['Authorization'] = "Bearer " + token;
+              console.log('Added OAUTH to: ' + endpoint);
+            }
           }
         }
       }
@@ -403,5 +415,4 @@ try {
 } catch (err) {
   console.warn('Warning on Injecting OAUTH, likely tibco-cloud.properties does not exits, or you need to run: npm install --save-dev properties-reader');
 }
-
 module.exports = PROXY_CONFIG;
