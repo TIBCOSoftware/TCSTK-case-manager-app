@@ -31,6 +31,7 @@ jobs:
           TCLI_PASS: ${{ secrets.TCLI_PASS }}
         run: |
           echo DEPLOYING Cloud Starter...
+          npm config set registry http://registry.npmjs.org
           npm install
           npm install --save-dev @tibco-tcstk/cloud-cli
           npx tcli -v
