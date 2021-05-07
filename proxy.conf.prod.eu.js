@@ -343,50 +343,60 @@ const PROXY_CONFIG = {
   }
 }
 
+// A switch to see if we need to update from the cookie (this is switched off if the OAUTH Token is injected from tibco-cloud.properties)
+let replaceTCSTKSESSION = false;
+// Should we inject OAUTH on all endpoints (on the local proxy)
+const INJECT_OAUTH = true;
+// Function for logging
+const debug = false;
+
 // Add the authorization header to request using the value from the TCSTKSESSION cookie
 function addOauthHeader(proxyReq, req) {
-  // check for existing auth header
-  let authHeaderExists = false;
-  Object.keys(req.headers).forEach(function (key) {
-    if (key.toLowerCase() === 'authorization') {
-      authHeaderExists = true;
-    }
-  });
-  if (authHeaderExists === false) {
+// check for existing auth header
+  if (replaceTCSTKSESSION) {
+    let authHeaderExists = false;
     Object.keys(req.headers).forEach(function (key) {
-      if (key === 'cookie') {
-        log('DEBUG', req.headers[key]);
-        cookies = req.headers[key].split('; ');
-        cookies.forEach((cook => {
-          if (cook.startsWith('TCSTKSESSION=')) {
-            const authKey = cook.replace('TCSTKSESSION=', '');
-            proxyReq.setHeader('Authorization', 'Bearer ' + authKey);
-            // log('DEBUG', 'Added auth header');
-          }
-        }))
+      if (key.toLowerCase() === 'authorization') {
+        authHeaderExists = true;
       }
     });
+    if (authHeaderExists === false) {
+      Object.keys(req.headers).forEach(function (key) {
+        if (key === 'cookie') {
+          log('DEBUG', req.headers[key]);
+          let cookies = req.headers[key].split('; ');
+          cookies.forEach((cook => {
+            if (cook.startsWith('TCSTKSESSION=')) {
+              const authKey = cook.replace('TCSTKSESSION=', '');
+              proxyReq.setHeader('Authorization', 'Bearer ' + authKey);
+              log('DEBUG', 'Added auth header');
+            }
+          }))
+          log('DEBUG', 'After: ', proxyReq.headers);
+        }
+      });
+    }
   }
 }
 
-// Function for logging
-const debug = false;
-function log(level, message){
-  if((debug && level == 'DEBUG') || level != 'DEBUG') {
-    console.log('[PROXY INTERCEPTOR] (' + level + '): ' + message);
+function log(level, ...message) {
+  if ((debug && level == 'DEBUG') || level != 'DEBUG') {
+    console.log('[PROXY INTERCEPTOR] (' + level + '): ', ...message);
   }
 }
 
 try {
   const propReader = require('properties-reader');
-  if (propReader) {
+  if (propReader && INJECT_OAUTH) {
     const tcProp = propReader('tibco-cloud.properties');
     if (tcProp) {
       const cloudProps = tcProp.path();
       if (cloudProps.CloudLogin && cloudProps.CloudLogin.OAUTH_Token && cloudProps.CloudLogin.OAUTH_Token.trim() != '') {
         let token = cloudProps.CloudLogin.OAUTH_Token;
-        if(token == 'USE-GLOBAL'){
-          const { resolve } = require('path')
+        // Do not replace the token on the fly.
+        replaceTCSTKSESSION = false;
+        if (token == 'USE-GLOBAL') {
+          const {resolve} = require('path')
           const globalPath = resolve(process.execPath, '../../lib/node_modules');
           const globalProp = propReader(globalPath + '/@tibco-tcstk/common/global-tibco-cloud.properties').path();
           if (globalProp.CloudLogin && globalProp.CloudLogin.OAUTH_Token && globalProp.CloudLogin.OAUTH_Token.trim() != '') {
@@ -395,7 +405,7 @@ try {
             console.error('Token set to USE-GLOBAL, but no global token found...');
           }
         }
-        if(token != 'USE-GLOBAL') {
+        if (token != 'USE-GLOBAL') {
           for (let endpoint in PROXY_CONFIG) {
             // console.log('ENDPOINT: ' , endpoint);
             // console.log(PROXY_CONFIG[endpoint]['headers']);
