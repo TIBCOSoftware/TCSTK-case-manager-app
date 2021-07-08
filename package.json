@@ -1,6 +1,6 @@
 {
   "name": "tcstk-case-manager-app",
-  "version": "2.3.3",
+  "version": "3.0.0",
   "scripts": {
     "tcli": "npm install gulp-cli -g && npm install -g @tibco-tcstk/cloud-cli && tcli",
     "ng": "ng",
@@ -30,9 +30,9 @@
     "@angular/platform-browser": "^10.2.5",
     "@angular/platform-browser-dynamic": "^10.2.5",
     "@angular/router": "^10.2.5",
-    "@tibco-tcstk/tc-core-lib": "^2.3.3",
-    "@tibco-tcstk/tc-forms-lib": "^2.3.3",
-    "@tibco-tcstk/tc-liveapps-lib": "^2.3.3",
+    "@tibco-tcstk/tc-core-lib": "^3.0.0-rc",
+    "@tibco-tcstk/tc-forms-lib": "^3.0.0-rc",
+    "@tibco-tcstk/tc-liveapps-lib": "^3.0.0-rc",
     "brace": "^0.11.1",
     "chart.js": "^2.9.4",
     "chartjs-plugin-datalabels": "^0.7.0",
