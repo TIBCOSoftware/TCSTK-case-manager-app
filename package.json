@@ -12,8 +12,8 @@
     "serve_eu": "ng serve --proxy-config proxy.conf.prod.eu.js --ssl true --source-map=true --aot",
     "serve_us": "ng serve --proxy-config proxy.conf.prod.us.js --ssl true --source-map=true --aot",
     "serve_au": "ng serve --proxy-config proxy.conf.prod.au.js --ssl true --source-map=true --aot",
-    "build_prod_hash": "ng build --prod --base-href /webresource/apps/tcstk-case-manager-app/index.html --deploy-url /webresource/apps/tcstk-case-manager-app/ && cd ./dist/tcstk-case-manager-app/ && zip -r ./app.zip ./* && cd ../..",
-    "build_prod": "ng build --prod --base-href /webresource/apps/tcstk-case-manager-app/ --deploy-url /webresource/apps/tcstk-case-manager-app/ && cd ./dist/tcstk-case-manager-app/ && zip -r ./app.zip ./* && cd ../.."
+    "build_prod_hash": "ng build --configuration production --base-href /webresource/apps/tcstk-case-manager-app/index.html --deploy-url /webresource/apps/tcstk-case-manager-app/ && cd ./dist/tcstk-case-manager-app/ && zip -r ./app.zip ./* && cd ../..",
+    "build_prod": "ng build --configuration production --base-href /webresource/apps/tcstk-case-manager-app/ --deploy-url /webresource/apps/tcstk-case-manager-app/ && cd ./dist/tcstk-case-manager-app/ && zip -r ./app.zip ./* && cd ../.."
   },
   "private": true,
   "dependencies": {
@@ -47,8 +47,8 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1102.14",
-    "@angular/cli": "^11.2.14",
+    "@angular-devkit/build-angular": "^12.1.1",
+    "@angular/cli": "^12.1.1",
     "@angular/compiler-cli": "^12.1.1",
     "@angular/language-service": "~12.1.1",
     "@tibco-tcstk/component-template": "^2.3.3",
