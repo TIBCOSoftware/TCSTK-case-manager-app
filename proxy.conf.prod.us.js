@@ -1,3 +1,4 @@
+const propReader = require("properties-reader");
 const PROXY_CONFIG = {
   "/idm/v3/login-oauth": {
     "target": {
@@ -397,9 +398,8 @@ try {
         // Do not replace the token on the fly.
         replaceTCSTKSESSION = false;
         if (token == 'USE-GLOBAL') {
-          const {resolve} = require('path')
-          const globalPath = resolve(process.execPath, '../../lib/node_modules');
-          const globalProp = propReader(globalPath + '/@tibco-tcstk/common/global-tibco-cloud.properties').path();
+          console.log('Using GLOBAL Authentication setting from global file: ' + require('os').homedir() + '/.tcli/global-tibco-cloud.properties')
+          const globalProp = propReader(require('os').homedir() + '/.tcli/global-tibco-cloud.properties').path();
           if (globalProp.CloudLogin && globalProp.CloudLogin.OAUTH_Token && globalProp.CloudLogin.OAUTH_Token.trim() != '') {
             token = globalProp.CloudLogin.OAUTH_Token;
           } else {
