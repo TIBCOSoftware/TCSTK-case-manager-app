@@ -65,4 +65,6 @@ more advanced Details
 
 ## License
 Copyright © 2021. TIBCO Software Inc.<br>
-This file is subject to the license terms contained in the license file that is distributed with this file. Please see 'tpc.txt' for details of license and dependent third party components referenced by this library.
+This file is subject to the license terms contained in the license file that is distributed with this file. 
+
+Please see 'TIB_cloud-starters-toolkit_x.x.x_license'.pdf/.txt for details of license and dependent third party components referenced by this library.
